@@ -1,0 +1,103 @@
+html
+{
+    overflow-x: hidden;
+}
+body{
+    overflow-x:hidden; 
+    font-family: 'Arial';
+     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	 padding: 0;
+    margin: 0;
+}
+header
+{
+	width: 100%;
+	background: #8f6a5a;
+}
+header .container {
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  	align-items: center;
+}
+.container {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+}
+.logo h2 {
+    color: #fff;
+    font-size: 28px;
+}
+section.banner-text {
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 5%;
+}
+section.banner-text .inner-form {
+    max-width: 500px;
+    padding: 50px 0;
+}
+section.banner-text .inner-form form {
+    border: 1px solid rgba(143, 106, 90, 0.18);
+    background: rgba(215, 221, 217, 0.53);
+    padding: 20px 10px 30px;
+    text-align: center;
+    border-radius: 28px;
+}
+.form-inner label {
+    width: 25%;
+    float: none;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 -2px;
+}
+.form-inner {
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.form-inner .form-input {
+    width: 75%;
+    float: none;
+    display: inline-block;
+    margin: 0 -2px;
+}
+.form-inner .form-input select,input {
+    -webkit-appearance: none;
+    padding: 10px;
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: 0;
+}
+.form-button input {
+    border: 0;
+    width: 170px;
+    background: rgba(60, 40, 32, 0.7);
+    color: #fff;
+    cursor:pointer;
+}
+.form-button {
+    display: block;
+    margin: 30px 0 0;
+}

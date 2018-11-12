@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon as Carbon;
+use Socialite;
+use App\User;
 
 class LoginController extends Controller
 {
@@ -26,6 +30,45 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
+    public function socialLogin($social)
+    {
+        return Socialite::driver($social)->redirect();
+    }
+
+    public function handleProviderCallback($social)
+   {
+       $userSocial = Socialite::driver($social)->user();
+       $user = User::where(['email' => $userSocial->getEmail()])->first();
+       if($user)
+       { 
+            $user->update([
+                'avatar' => $userSocial->avatar,
+                'provider' => $social,
+                'provider_id' => $userSocial->id,
+                'access_token' => $userSocial->token
+            ]);
+           Auth::login($user);
+       }
+       else
+       {
+            $dateTime = Carbon::now();
+            $user = User::create([
+                'name' => $userSocial->getName(),
+                'email' => $userSocial->getEmail(),
+                'avatar' => $userSocial->getAvatar(),
+                'provider' => $social,
+                'provider_id' => $userSocial->getId(),
+                'access_token' => $userSocial->token,
+                'email_verified_at' => $dateTime->toDateTimeString(),
+                // user can use reset password to create a password
+                'password' => ''
+            ]);
+            // ToDo : Password Change Notification IF Blank
+            Auth::login($user);
+       }
+       return redirect($this->redirectTo);
+   }
 
     /**
      * Create a new controller instance.

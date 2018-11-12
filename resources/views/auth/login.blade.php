@@ -39,6 +39,8 @@
                             </div>
                         </div>
 
+                        <a href="{{ url('login/google') }}" class="btn btn-social-icon btn-google-plus">Google</a>
+                        <!--<a href="{{ url('login/facebook') }}" class="btn btn-social-icon btn-google-plus">Facebook</a>-->
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">

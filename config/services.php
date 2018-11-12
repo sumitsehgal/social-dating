@@ -35,4 +35,16 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => env('G+_CLIENT_ID'),
+        'client_secret' => env('G+_CLIENT_SECRET'),
+        'redirect' => env('G+_REDIRECT'),
+    ],
+
+    'facebook' => [
+        'client_id'     => env('FB_ID'),
+        'client_secret' => env('FB_SECRET'),
+        'redirect'      => env('FB_REDIRECT_URL'),
+    ]
+
 ];
