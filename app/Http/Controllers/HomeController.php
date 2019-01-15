@@ -51,4 +51,9 @@ class HomeController extends Controller
         $plans = Plan::all();
         return view('welcome', compact('plans'));
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

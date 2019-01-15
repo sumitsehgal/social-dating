@@ -731,7 +731,10 @@
     /*----------------------------------------------------*/
     /*  Date Picker js
     /*----------------------------------------------------*/
-    $(".form_datetime").datetimepicker({format: 'dd-mm-yyyy hh:ii'});
+    $(document).ready(function(){
+        if($(".form_datetime").length > 0)
+            $(".form_datetime").datetimepicker({format: 'dd-mm-yyyy hh:ii'});
+    })
     
     /*----------------------------------------------------*/
     /*  Counter up js

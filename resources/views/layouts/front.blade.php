@@ -151,11 +151,12 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown submenu active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                        <li class=" {{ request()->is('/') ? 'active' : '' }}">
+                            <a href="/" >Home</a>
                         </li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="/contact">Contact us</a></li>
+                        <li class="{{ request()->is('about-us') ? 'active' : '' }}"><a href="/about-us">About Us</a></li>
+                        <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="/contact">Contact us</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @if (Route::has('login'))
