@@ -1,0 +1,261 @@
+html
+{
+    overflow-x: hidden;
+}
+body{
+    overflow-x:hidden; 
+    font-family: 'Arial';
+     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	 padding: 0;
+    margin: 0;
+}
+a
+{
+    cursor: pointer;
+}
+input
+{
+    outline: 0;
+}
+header
+{
+	width: 100%;
+	background: #8f6a5a;
+}
+header .container {
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  	align-items: center;
+}
+.container {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+}
+.logo h2 {
+    color: #fff;
+    font-size: 28px;
+}
+section.banner-text {
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 40%;
+}
+footer {
+    background: rgb(58, 47, 55);
+    padding: 15px;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+/** Login CSS **/
+.login-form {  
+    padding: 10% 0;
+    text-align: center;
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    z-index: 9999999999;
+}
+.login-form-inner {
+    width: 400px;
+    margin: auto;
+    clear: both;
+    border-radius: 10px;
+    padding: 18px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    background: #f0f2f7;
+    overflow: inherit;
+}
+.login-form-inner h2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0;
+}
+.email input {
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.email input:focus {
+    border: 1px solid #8f6a5a;
+    outline: 0;
+}
+.forgot-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 20px 0;
+}
+.remember span {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+.remember input {
+    margin: 0px 4px;
+}
+.forgot a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+.forgot a:hover {
+    color: #9e5231;
+}
+.login-button input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #8f6a5a;
+    background: #8f6a5a;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 0 10px 0px;
+    text-transform: uppercase;
+}
+.login-button input:hover {
+    background: #4a3b3e;
+    border: 1px solid #4a3b3e;
+}
+.facebook-button a {
+    width: inherit;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #4a3b3e;
+    background: #4a3b3e;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 0 10px 0px;
+    text-transform: uppercase;
+    display: block;
+}
+.facebook-button a:hover {
+    background: #8f6a5a;
+    border: 1px solid #8f6a5a;
+}
+.account-register {
+    padding: 10px 0;
+}
+.account-register span {
+    font-size: 15px;
+}
+.account-register a {
+    font-size: 15px;
+    color: #000;
+}
+.OR {
+    padding: 10px 0;
+}
+.OR span:before {
+    position: absolute;
+    content: "";
+    background:#a3a3a3;
+    width: 25px;
+    height: 1px;
+    left: -30px;
+    top: 7px;
+}
+.OR span:after {
+    position: absolute;
+    content: "";
+    background: #a3a3a3;
+    width: 25px;
+    height: 1px;
+    right: -30px;
+    top: 7px;
+}
+.OR span {
+    position: relative;
+    color: #a3a3a3;
+}
+/*Signup*/
+section.banner-text.signup
+{
+    padding-bottom: 4%;
+}
+section.banner-text .inner-form {
+    max-width: 500px;
+    padding: 50px 0;
+}
+section.banner-text .inner-form form {
+    border: 2px solid rgba(143, 106, 90, 0.18);
+    background: rgba(215, 221, 217, 0.53);
+    padding: 20px 10px 30px;
+    text-align: center;
+    border-radius: 28px;
+    box-shadow: 4px 3px 20px 0px #d8deda;
+}
+.form-inner label {
+    width: 25%;
+    float: none;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 -2px;
+}
+.form-inner {
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.form-inner .form-input {
+    width: 75%;
+    float: none;
+    display: inline-block;
+    margin: 0 -2px;
+}
+.form-inner .form-input select,.form-inner .form-input input {
+    -webkit-appearance: none;
+    padding: 10px;
+    width: 100%;
+    background: transparent;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    outline: 0;
+    border-radius: 4px;
+}
+.form-button input {
+    border: 0;
+    width: 170px;
+    background: rgba(60, 40, 32, 0.7);
+    color: #fff;
+    cursor:pointer;
+    height: 40px;
+}
+.form-button {
+    display: block;
+    margin: 30px 0 0;
+}
+/*signup*/

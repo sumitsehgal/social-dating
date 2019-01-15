@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/fav-icon.png" type="image/x-icon" />
+        <title>Brown Sugar Male - Dating Social Network Website</title>
+        <link href="vendors/material-icon/css/materialdesignicons.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="vendors/linears-icon/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendors/revolution/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="vendors/revolution/css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="vendors/revolution/css/settings.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendors/image-dropdown/dd.css" rel="stylesheet">
+        <link href="vendors/image-dropdown/flags.css" rel="stylesheet">
+        <link href="vendors/image-dropdown/skin2.css" rel="stylesheet">
+        <link href="vendors/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="vendors/bootstrap-selector/bootstrap-select.css" rel="stylesheet">
+        <link href="vendors/bootstrap-datepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <link href="vendors/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+        <link href="vendors/animate-css/animate.css" rel="stylesheet">
+        <link href="vendors/bs-tooltip/jquery.webui-popover.css" rel="stylesheet">
+        <link href="vendors/jquery-ui/jquery-ui.css" rel="stylesheet">
+        
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+    </head>
+    <body>
+       
+        <div class="login_form_inner zoom-anim-dialog mfp-hide" id="small-dialog">
+           <h4>Login</h4>
+           <form>
+               <input type="text" placeholder="Username">
+               <input type="password" placeholder="Password">
+               <div class="login_btn_area">
+                   <button type="submit" value="LogIn" class="btn form-control login_btn">LogIn</button>
+                   <div class="login_social">
+                       <h5>Login With</h5>
+                       <ul>
+                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                       </ul>
+                   </div>
+               </div>
+           </form>
+           <img class="mfp-close" src="img/close-btn.png" alt="">
+        </div>
+        <div class="register_form_inner zoom-anim-dialog mfp-hide" id="register_form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="registration_man">
+                        <img src="img/Registration_man.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="registration_form_s">
+                        <h4>Registration</h4>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="reg_email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="reg_first" placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="reg_user" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="reg_pass" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <span data-bind="label">Gender</span>&nbsp;<span class="arrow_carrot-down"><i class="fa fa-sort-asc" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Male</a></li>
+                                        <li><a href="#">Female</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="datepicker">
+                                    <input type='text' class="form-control datetimepicker4" placeholder="Birthday" />
+                                    <span class="add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class="reg_chose form-group">
+                                <div class="reg_check_box">
+                                    <input type="radio" id="s-option" name="selector">
+                                    <label for="s-option">I`m Not Robot</label>
+                                    <div class="check"><div class="inside"></div></div>
+                                </div>
+                                <button type="submit" value="LogIn" class="btn form-control login_btn">Register</button>
+                            </div>
+                        </form>
+                        <img class="mfp-close" src="img/close-btn.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--First Main header-->
+        <header class="header_menu_area">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo1.png" alt="Logo"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown submenu active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                        </li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="popup-with-zoom-anim" href="#small-dialog"><i class="mdi mdi-key-variant"></i>Login</a></li>
+                        <li><a href="#register_form" class="popup-with-zoom-anim"><i class="fa fa-user-plus"></i>Registration</a></li>
+                        <li class="flag_drop">
+                            <div class="selector">
+                                <select class="language_drop" name="countries" id="countries" style="width:300px;">
+                                  <option value='yt' data-image="img/country-aus.png" data-imagecss="flag yt" data-title="English">English</option>
+                                  <option value='yt' data-image="img/country-fre.png" data-imagecss="flag yt" data-title="English">French</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+        <!--First Main header-->    
+        <!--Slider Reg-->
+        <section class="slider_area">
+            <div class="slider_inner">
+                <div class="rev_slider"  data-version="5.3.0.2" id="home-slider">
+                    <ul> 
+                       <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/bg2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+                        </li>
+                        <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/bg2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+                        </li>
+                        
+                    </ul> 
+                </div><!-- END REVOLUTION SLIDER -->
+            </div>
+            <div class="registration_form_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="registration_form_s">
+                                <h4>Registration</h4>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="reg_email2" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="reg_first2" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="reg_user2" placeholder="Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="reg_pass2" placeholder="Password">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                    <span data-bind="label">Gender</span>&nbsp;<span class="arrow_carrot-down"><i class="fa fa-sort-asc" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Male</a></li>
+                                                        <li><a href="#">Female</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="datepicker">
+                                                    <input type='text' class="form-control datetimepicker4" placeholder="Birthday" />
+                                                    <span class="add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reg_chose form-group">
+                                        <button type="submit" value="LogIn" class="btn form-control login_btn">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <!-- <div class="form_man">
+                                <img src="img/registration-man.png" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Slider Reg-->
+        <!--Welcome-->
+        <section class="welcome_area">
+            <div class="container">
+                <div class="welcome_title">
+                    <h3>Welcome to <span>Brown</span> Sugar Male</h3>
+                    <img src="img/w-title-b.png" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="welcome_item">
+                            <img src="images/w-icon-1.png" alt="">
+                            <h4 class="counter">100</h4>
+                            <h6>Total Members</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="welcome_item">
+                            <img src="img/welcome-icon/w-icon-2.png" alt="">
+                            <h4 class="counter">40</h4>
+                            <h6>Members online</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="welcome_item">
+                            <img src="img/welcome-icon/w-icon-3.png" alt="">
+                            <h4 class="counter">30</h4>
+                            <h6>Men online</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="welcome_item">
+                            <img src="img/welcome-icon/w-icon-4.png" alt="">
+                            <h4 class="counter">10</h4>
+                            <h6>Women online</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Welcome-->
+        <!--Download-->
+        <section class="download_area">
+            <div class="download_full_slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="item">
+                            <div class="col-md-7">
+                                <div class="download_app_icon">
+                                    <h3>Download <span>Brown </span><span>Sugar Male</span> app</h3>
+                                    <h5>Free Available in All Store PlayStore, AppStore & Microsoft Store</h5>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-android"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-apple"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-windows"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="download_content">
+                                    <div class="item">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <h4>Lorem ipsum</h4>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <h4>Lorem ipsum</h4>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="download_moblie">
+                                    <div class="download_m_slider">
+                                        <img src="img/mobile-slider/mobile-1.png" alt="">
+	                                        <div class="download_moblile_slider">
+	                                            <div class="item">
+	                                                <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
+                                                    Coming Soon
+	                                            </div>
+                                                <div class="item">
+                                                    <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
+                                                    Coming Soon
+                                                </div>
+                                                <div class="item">
+                                                    <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
+                                                    Coming Soon
+                                                </div>
+	                                            <!-- <div class="item">
+	                                                <img src="img/mobile-slider/screen-1.png" alt="">
+	                                            </div>
+	                                            <div class="item">
+	                                                <img src="img/mobile-slider/screen-1.png" alt="">
+	                                            </div> -->
+	                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Download-->
+        
+        <!--Find Your Soul-->
+        <section class="find_soul_area">
+            <div class="container">
+                <div class="welcome_title">
+                    <h3>Steps to Find Your Soul mate</h3>
+                    <img src="img/w-title-b.png" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="find_soul_item">
+                            <img src="images/soul-1.png" alt="">
+                            <h4>Create a profile</h4>
+                            <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="find_soul_item">
+                            <img src="img/soul-icon/soul-2.png" alt="">
+                            <h4>Find matches </h4>
+                            <p>Lorem Ipsum Lorem ipsum Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="find_soul_item">
+                            <img src="images/soul-3.png" alt="">
+                            <h4>Start Dating</h4>
+                            <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Find Your-->
+        <!--Video Area-->
+        <section class="video_area">
+            <div class="row m0 video_row">
+                <iframe id="video" src="http://www.youtube.com/embed/bCIXMvE5nL4?enablejsapi=1&amp;html5=1&amp;rel=0&amp;fs=0&amp;loop=1&amp;showinfo=0&amp;disablekb=0&amp;controls=1&amp;color=white&amp;playlist=bCIXMvE5nL4&amp;autoplay=1"></iframe>
+                <div class="overlay" id="video_overlay">
+                    <div class="overlay_bg"></div>
+                    <div class="play_pause row m0">
+                       <!--  <i class="fa fa-play" aria-hidden="true" id="play_btn"></i>
+                        <i class="fa fa-pause" aria-hidden="true" id="pause_btn"></i> -->
+                        <div class="video_content">
+                            <h4>Find your perfect match With us </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Video-->    
+        <!--pricing--table -->
+        <div class="wrapper-pricing">
+            <div class="package">
+                <div class="name">Basic</div>
+                <div class="price">$9.99</div>
+                <div class="trial">Available for a one week</div>
+                <hr>
+                <ul>
+                    <li>
+                        <strong>8</strong> team members
+                    </li>
+                    <li>
+                        <strong>6</strong> team playlists
+                    </li>
+                    <li>
+                        <strong>Unlimited</strong> public playlists
+                    </li>
+                </ul>
+        	</div>
+	        <div class="package">
+	            <div class="name">Limited</div>
+	            <div class="price">$15.99</div>
+	            <div class="trial">Available for a one month</div>
+	            <hr>
+	            <ul>
+	                <li>
+	                    <strong>Unlimited</strong> team members
+	                </li>
+	                <li>
+	                    <strong>Unlimited</strong> team playlists
+	                </li>
+	                <li>
+	                    <strong>Unlimited</strong> public playlists
+	                </li>
+	                <li>
+	                    Team analytics
+	                </li>
+	                <li>
+	                    Send files
+	                </li>
+	            </ul>
+	        </div>
+        	<div class="package">
+            <div class="name">Brilliant</div>
+            <div class="price">$39.99</div>
+            <div class="trial">Available for a four months</div>
+            <hr>
+            <ul>
+                <li>
+                    <strong>5</strong> team members
+                </li>
+                <li>
+                    <strong>3</strong> team playlists
+                </li>
+                <li>
+                    <strong>Unlimited</strong> public playlists
+                </li>
+            </ul>
+        	</div>
+        	<div class="package">
+	            <div class="name">Brilliant</div>
+	            <div class="price">$85.55</div>
+	            <div class="trial">Available for a year</div>
+	            <hr>
+	            <ul>
+	                <li>
+	                    <strong>5</strong> team members
+	                </li>
+	                <li>
+	                    <strong>3</strong> team playlists
+	                </li>
+	                <li>
+	                    <strong>Unlimited</strong> public playlists
+	                </li>
+	            </ul>
+	        </div>
+   		</div>
+    <!--pricing table -->
+        <!--Register Members-->
+        <section class="register_members_slider">
+            <div class="container">
+                <div class="welcome_title">
+                    <h3>Latest registered members</h3>
+                    <img src="img/w-title-b.png" alt="">
+                </div>
+                <div class="r_members_inner">
+                    <div class="item">
+                        <img src="img/members/r_members-1.png" alt="">
+                        <h4>Rocky Ahmed</h4>
+                        <h5>22 years old</h5>
+                    </div>
+                    <div class="item">
+                        <img src="img/members/r_members-2.png" alt="">
+                        <h4>Alex Jones</h4>
+                        <h5>23 years old</h5>
+                    </div>
+                    <div class="item">
+                        <img src="img/members/r_members-3.png" alt="">
+                        <h4>Nancy Martin</h4>
+                        <h5>25 years old</h5>
+                    </div>
+                    <div class="item">
+                        <img src="img/members/r_members-4.png" alt="">
+                        <h4>Kavin Smith</h4>
+                        <h5>20 years old</h5>
+                    </div>
+                    <div class="item">
+                        <img src="img/members/r_members-5.png" alt="">
+                        <h4>Lena Adms</h4>
+                        <h5>26 years old</h5>
+                    </div>
+                    <div class="item">
+                        <img src="img/members/r_members-6.png" alt="">
+                        <h4>Peter Nevill</h4>
+                        <h5>20 years old</h5>
+                    </div>
+                    <div class="item">
+                        <img src="img/members/r_members-2.png" alt="">
+                        <h4>Alex Jones</h4>
+                        <h5>23 years old</h5>
+                    </div>
+                    <div class="item">
+                        <img src="img/members/r_members-3.png" alt="">
+                        <h4>Nancy Martin</h4>
+                        <h5>25 years old</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Register Members-->       
+        <!--Footer Area-->
+        <footer class="footer_area">
+            <div class="copyright">
+                <div class="copyright_left">
+                    <div class="copyright_text">
+                        <h4>Copyright &copy; 2018. <a href="#">Brown Sugar Male</a></h4>
+                    </div>
+                </div>
+                <div class="copyright_right">
+                    <div class="copyright_social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer Area-->
+        
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <!--RS5.0 Extensions-->
+        <script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script src="vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+      
+        <!-- Extra plugin js -->
+        <script src="vendors/image-dropdown/jquery.dd.min.js"></script>
+        <script src="vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/theme.js"></script>
+    </body>
+</html>

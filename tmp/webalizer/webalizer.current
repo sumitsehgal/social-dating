@@ -1,0 +1,633 @@
+# Webalizer V2.23-05 Incremental Data - 01/08/2019 01:02:00
+2019 1 8 1 2 0
+415 344 56 89 12 73 4764375 93 50 0
+1 1 53 1 8
+25 14 169482 9 10 7
+8 7 65667 4 3 3
+30 18 198774 12 18 7
+34 27 667663 14 5 4
+72 52 518881 19 20 11
+32 27 699207 9 1 1
+213 198 2410726 25 35 16
+1 1 33975 1 1 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+9 7 535825 2
+35 34 207638 6
+10 6 75716 7
+36 33 317808 3
+3 3 5135 1
+9 4 17464 5
+13 13 108607 1
+5 2 33220 0
+9 2 28896 6
+10 5 71520 3
+41 39 364911 2
+19 19 244349 3
+3 0 20770 2
+14 14 115830 1
+13 10 132657 4
+6 5 48296 3
+14 13 73513 2
+2 0 20526 0
+25 24 217092 2
+49 39 308422 16
+66 53 1147514 21
+15 11 583435 2
+4 4 17553 0
+5 4 67678 1
+0
+0
+0
+344
+0
+0
+0
+0
+0
+0
+0
+11
+3
+0
+0
+0
+0
+0
+0
+0
+0
+57
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/vendors/revolution/assets/coloredbg.png
+0 1 0 184 0 0
+/vendors/image-dropdown/jquery.dd.min.js
+0 4 0 35372 0 0
+/images/msdropdown/skin2/title-bg.html
+0 1 0 260 0 0
+/css/font-awesome.min.css
+0 4 0 28248 0 0
+/vendors/revolution/assets/gridtile_3x3_white.png
+0 1 0 935 0 0
+/img/soul-icon/address-3.png
+0 1 0 1238 0 0
+/vendors/revolution/assets/loader.gif
+0 1 0 2545 0 0
+/vendors/owl-carousel/assets/owl.carousel.css
+0 4 0 4412 0 0
+/vendors/jquery-ui/images/ui-icons_ffffff_256x240.html
+0 1 0 273 0 0
+/vendors/revolution/js/jquery.themepunch.tools.min.js
+0 7 0 261331 0 0
+/vendors/revolution/assets/gridtile_3x3.png
+0 1 0 938 0 0
+/vendors/material-icon/css/materialdesignicons.min.css
+0 5 0 69085 0 0
+/vendors/bootstrap-selector/bootstrap-select.css
+0 6 0 9276 0 0
+/img/soul-icon/address-1.png
+0 1 0 1658 0 0
+/img/Registration_man.png
+0 3 0 73026 0 0
+/img/members/r_members-3.png
+0 2 0 30546 0 0
+/images/bg2.jpg
+0 3 0 889434 0 0
+/img/members/r_members-5.png
+0 2 0 33392 0 0
+/vendors/revolution/css/layers.css
+0 7 0 74522 0 0
+/vendors/animate-css/animate.css
+0 6 0 26580 0 0
+/img/banner/banner-bg-1.jpg
+0 1 0 41957 0 0
+/img/soul-icon/soul-2.png
+0 2 0 2678 0 0
+/vendors/image-dropdown/skin2.css
+0 8 0 3672 0 0
+/vendors/jquery-ui/images/ui-icons_555555_256x240.html
+0 1 0 273 0 0
+/js/bootstrap.min.js
+0 7 0 69468 0 0
+/vendors/jquery-ui/jquery-ui.css
+0 6 0 50322 0 0
+/password/reset
+0 3 0 9175 0 1
+/vendors/revolution/css/settings.css
+0 5 0 35100 0 0
+/img/map-marker.png
+0 1 0 842 0 0
+/img/close-btn.png
+0 3 0 1032 0 0
+/vendors/material-icon/fonts/materialdesignicons-webfont8d40.ttf
+0 1 0 123364 0 0
+/vendors/bs-tooltip/jquery.webui-popover.css
+0 6 0 10284 0 0
+/vendors/jquery-ui/images/ui-icons_cc0000_256x240.html
+0 1 0 274 1 0
+/img/members/r_members-1.png
+0 3 0 49488 0 0
+/js/brown.js
+0 6 0 3642 0 0
+/images/logo.png
+0 3 0 446574 0 0
+/favicon.ico
+0 3 0 0 0 0
+/vendors/revolution/css/navigation.css
+0 8 0 64304 0 0
+/vendors/image-dropdown/flags.css
+0 6 0 9360 0 0
+/vendors/revolution/js/extensions/revolution.extension.parallax.min.js
+0 6 0 18882 0 0
+/vendors/revolution/assets/gridtile_white.png
+0 1 0 931 0 0
+/img/welcome-icon/w-icon-4.png
+0 3 0 2649 0 0
+/img/testimonials-quoto.png
+0 1 0 1054 0 0
+/img/mobile-slider/mobile-1.png
+0 3 0 94728 0 0
+/vendors/bootstrap-datepicker/css/bootstrap-datetimepicker.min.css
+0 7 0 9261 0 0
+/js/theme.js
+0 6 0 26844 0 0
+/vendors/revolution/js/jquery.themepunch.revolution.min.js
+0 6 0 103980 0 0
+/img/banner/banner-bg-3.jpg
+0 1 0 66839 0 0
+/img/banner/banner-bg-2.jpg
+0 1 0 53647 0 0
+/css/style.css
+0 7 0 138761 0 0
+/img/tick.png
+0 1 0 274 0 0
+/img/members/r_members-4.png
+0 2 0 30490 0 0
+/img/banner/t-left-img.png
+0 1 0 236 0 0
+/img/download_bg.jpg
+0 1 0 56794 0 0
+/img/members/r_members-2.png
+0 4 0 58476 0 0
+/img/welcome-icon/w-icon-2.png
+0 4 0 3588 0 0
+/vendors/jquery-ui/images/ui-icons_777620_256x240.html
+0 1 0 276 0 0
+/img/soul-icon/address-2.png
+0 1 0 669 0 0
+/img/w-title-b.png
+0 3 0 819 0 0
+/css/bootstrap.min.css
+0 5 0 100680 0 0
+/vendors/owl-carousel/assets/owl.video.play.html
+0 1 0 265 1 0
+/vendors/magnific-popup/jquery.magnific-popup.min.js
+0 7 0 51422 0 0
+/contact
+0 4 0 14488 1 0
+/vendors/linears-icon/style.css
+0 5 0 8315 0 0
+/images/msdropdown/skin2/dd_arrow.html
+0 1 0 262 0 0
+/vendors/owl-carousel/owl.carousel.min.js
+0 4 0 42088 0 0
+/vendors/magnific-popup/magnific-popup.css
+0 6 0 10896 0 0
+/img/map-persion.png
+0 3 0 10887 0 0
+/img/Error-bg.png
+0 1 0 7231 0 0
+/img/video_bg.jpg
+0 1 0 130185 0 0
+/
+0 39 0 458949 38 19
+/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js
+0 6 0 40566 0 0
+/img/soul-icon/soul-1.png
+0 4 0 6136 0 0
+/vendors/jquery-ui/images/ui-icons_777777_256x240.html
+0 1 0 273 0 0
+/img/members/r_members-6.png
+0 3 0 45282 0 0
+/js/jquery-2.1.4.min.js
+0 6 0 177192 0 0
+/img/soul-icon/soul-3.png
+0 3 0 5358 0 0
+/img/welcome-icon/w-icon-1.png
+0 3 0 6486 0 0
+/robots.txt
+0 18 0 432 0 0
+/img/banner/t-right-img.png
+0 1 0 231 0 0
+/vendors/img/loading.html
+0 1 0 250 0 0
+/js/map-custome.js
+0 6 0 10320 0 0
+/vendors/revolution/assets/gridtile.png
+0 1 0 933 0 0
+/img/welcome-icon/w-icon-3.png
+0 2 0 1768 0 0
+/img/members_says_bg.jpg
+0 1 0 122153 0 0
+/css/responsive.css
+0 5 0 15005 0 0
+/vendors/revolution/js/extensions/revolution.extension.navigation.min.js
+0 4 0 28352 0 0
+/vendors/jquery-ui/images/ui-icons_444444_256x240.html
+0 1 0 273 1 0
+/vendors/image-dropdown/dd.css
+0 6 0 7134 0 0
+# End Of Table - urls
+# -sites- (monthly)
+94.130.16.50
+0 16 6 32526 3 1546677473
+-
+82.80.249.133
+0 1 1 883 0 0
+-
+82.80.249.155
+0 2 2 1469 0 0
+-
+94.126.169.121
+0 2 0 20526 0 0
+-
+188.66.6.88
+0 1 0 10263 0 0
+-
+40.77.167.70
+0 5 5 48273 0 0
+-
+180.122.68.183
+0 11 1 38158 1 1546546079
+/
+82.80.249.163
+0 1 1 148858 0 0
+-
+52.53.201.78
+0 4 4 20351 4 1546891106
+/
+82.80.249.157
+0 1 1 184 0 0
+-
+82.80.249.211
+0 1 1 5091 1 1546891104
+/
+82.80.230.228
+0 34 34 865386 1 1546891304
+/vendors/jquery-ui/images/ui-icons_ffffff_256x240.html
+208.51.62.198
+0 1 1 24 0 0
+-
+66.249.79.36
+0 24 22 324284 4 1546831394
+/
+82.80.244.51
+0 1 0 2257 0 0
+-
+104.168.90.116
+0 2 2 8702 1 1546681473
+/contact
+103.29.215.148
+0 2 0 20526 0 0
+-
+50.116.84.108
+0 1 0 10263 0 0
+-
+60.191.38.77
+0 5 5 170381 5 1546909320
+/
+209.17.96.66
+0 1 1 33975 1 1546859951
+/
+81.171.31.236
+0 1 0 10263 0 0
+-
+66.249.79.73
+0 39 38 836899 3 1546858172
+/
+207.46.13.45
+0 10 10 94722 0 0
+-
+188.64.184.40
+0 2 0 20526 0 0
+-
+10.39.128.23
+0 1 1 24 0 0
+-
+82.80.249.158
+0 30 22 142714 1 1546891199
+-
+39.98.177.244
+0 1 0 2257 0 0
+-
+10.39.129.43
+0 1 1 24 0 0
+-
+66.249.79.32
+0 48 45 328417 3 1546872534
+-
+103.23.224.149
+0 1 0 10263 0 0
+-
+82.80.249.194
+0 1 1 274 1 1546891307
+/vendors/jquery-ui/images/ui-icons_cc0000_256x240.html
+185.25.23.20
+0 1 0 10263 0 0
+-
+66.249.79.71
+0 67 63 750691 3 1546823768
+/
+40.83.212.119
+0 2 0 20534 0 0
+-
+136.243.90.101
+0 1 0 10263 0 0
+-
+40.77.167.35
+0 9 9 58654 1 1546858365
+/
+66.249.79.75
+0 27 23 162911 5 1546890494
+/
+5.188.211.22
+0 1 1 33975 1 1546486578
+/
+184.168.200.161
+0 1 0 10263 0 0
+-
+80.82.67.131
+0 1 1 33975 1 1546680563
+/
+66.249.79.40
+0 15 15 74895 3 1546870426
+/
+10.39.129.45
+0 1 1 5087 1 1546489018
+/
+185.206.225.228
+0 4 0 41052 1 1546311043
+-
+157.55.39.34
+0 1 1 24 0 0
+-
+118.184.219.60
+0 2 0 10507 1 1546520197
+-
+207.46.13.113
+0 10 10 62819 0 0
+-
+93.125.99.84
+0 1 0 10263 0 0
+-
+82.80.249.164
+0 4 4 81563 0 0
+-
+62.210.83.78
+0 1 1 5087 1 1546529411
+/
+82.80.249.143
+0 8 7 6201 1 1546891304
+/images/msdropdown/skin2/title-bg.html
+207.46.13.103
+0 1 1 5088 1 1546701085
+/
+157.55.39.139
+0 1 1 123364 0 0
+-
+104.131.105.168
+0 2 0 20526 0 0
+-
+173.195.150.165
+0 1 1 5087 1 1546630674
+/
+39.98.56.218
+0 1 0 2257 0 0
+-
+173.44.35.172
+0 1 0 10263 0 0
+-
+# End Of Table - sites (monthly)
+# -sites- (daily)
+60.191.38.77
+0 1 1 33975 1 1546909320
+/
+# End Of Table - sites (daily)
+# -referrers- 
+http://core2creations.com/
+0 57
+http://core2creations.com/index.php
+0 10
+https://www.baidu.com/
+0 2
+http://core2creations.com
+0 1
+http://www.core2creations.com/
+0 95
+- (Direct Request)
+0 227
+http://www.core2creations.com/contact
+0 1
+http://site.ru
+0 16
+http://core2creations.com/wp-login.php
+0 1
+http://www.core2creations.com/password/reset
+0 2
+http://core2creations.com/contact-us.php
+0 1
+http://www.google.com.hk
+0 2
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
+0 2
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+0 2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko
+0 1
+Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71
+0 3
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 1
+Mozilla/5.0 (compatible; Nimbostratus-Bot/v1.3.2; http://cloudsystemnetworks.com)
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.3; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0
+0 2
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.72 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 3
+Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:27.0) Gecko/20100101 Firefox/27.0
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+0 1
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:26.0) Gecko/20100101 Firefox/26.0
+0 2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.68 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+0 2
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0
+0 1
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+0 35
+Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+0 37
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+0 4
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.3) Gecko/20100101 Firefox/27.3
+0 1
+Mozilla/5.0 (Windows NT 5.1; rv:26.0) Gecko/20100101 Firefox/26.0
+0 2
+Mozilla/5.0 (Windows NT 6.1; rv:25.0) Gecko/20100101 Firefox/25.0
+0 2
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:36.0) Gecko/20100101 Firefox/36.0
+0 2
+Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36
+0 119
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 1
+Googlebot-Image/1.0
+0 43
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3198.0 Safari/537.36 OPR/49.0.2711.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+0 3
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.73.11 (KHTML, like Gecko) Version/6.1.1 Safari/537.73.11
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0
+0 4
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+0 1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.72 Safari/537.36
+0 1
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 2
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko/20100101 Firefox/47.0
+0 5
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 3
+Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.71 (KHTML, like Gecko) Version/6.1 Safari/537.71
+0 5
+Mozilla/6.0 (compatible)
+0 2
+Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)
+0 16
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 3
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (Windows NT 6.0; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; rv:24.0) Gecko/20100101 Firefox/24.0
+0 1
+Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile S
+0 23
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36
+0 2
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/31.0.1650.63 Chrome/31.0.1650.63 Safar
+0 1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+0 4
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4
+0 16
+Mozilla/5.0 (Windows NT 6.2; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.41 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0
+0 2
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+0 1
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+0 13
+Mozilla/5.0 (Windows NT 6.1; rv:26.0) Gecko/20100101 Firefox/26.0
+0 1
+Mozilla/5.0 (compatible)
+0 3
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:25.0) Gecko/20100101 Firefox/25.0
+0 3
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

@@ -1,0 +1,515 @@
+AWSTATS DATA FILE 7.6 (build 20161204)
+# If you remove this file, all statistics for date 201811 will be lost/reset.
+# Last config file used to build this data file was /home/wvu53ld49caz/tmp/awstats/awstats.core2creations.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2019                
+POS_TIME 2697                
+POS_VISITOR 12009               
+POS_DAY 14240               
+POS_DOMAIN 3409                
+POS_LOGIN 3730                
+POS_ROBOT 3885                
+POS_WORMS 4447                
+POS_EMAILSENDER 4578                
+POS_EMAILRECEIVER 4721                
+POS_SESSION 14544               
+POS_SIDER 14734               
+POS_FILETYPES 4856                
+POS_DOWNLOADS 5083                
+POS_OS 5131                
+POS_BROWSER 5328                
+POS_SCREENSIZE 5788                
+POS_UNKNOWNREFERER 5862                
+POS_UNKNOWNREFERERBROWSER 6095                
+POS_ORIGIN 6265                
+POS_SEREFERRALS 6404                
+POS_PAGEREFS 6567                
+POS_SEARCHWORDS 6759                
+POS_KEYWORDS 6911                
+POS_MISC 2360                
+POS_ERRORS 6970                
+POS_CLUSTER 3586                
+POS_SIDER_404 7121                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20181201023545 51 9465 8574194609861
+FirstTime 20181120112720
+LastTime 20181130211507
+LastUpdate 20181201051932 51 0 50 0 0
+TotalVisits 59                  
+TotalUnique 54                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 57                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+PDFSupport 0 0 0
+DirectorSupport 0 0 0
+JavascriptDisabled 0 0 0
+JavaEnabled 0 0 0
+AddToFavourites 0 61 0
+WindowsMediaPlayerSupport 0 0 0
+FlashSupport 0 0 0
+QuickTimeSupport 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 7 17 654246 17 19 27297
+1 0 0 0 16 17 33433
+2 2 2 2334 20 21 99943
+3 6 13 208329 10 16 23195
+4 4 5 14288 34 41 82892
+5 13 21 676748 11 17 16295
+6 9 11 91196 39 49 141541
+7 3 10 648991 3 7 7382
+8 14 20 593543 6 11 69083
+9 12 39 2929687 4 10 25657
+10 24 46 839052 16 30 232381
+11 12 22 567052 27 71 30016
+12 5 7 136863 11 17 3112
+13 2 2 593 4 6 7831
+14 0 0 0 3 4 28240
+15 3 3 2334 4 5 7433
+16 1 1 1145 5 10 125789
+17 0 0 0 1 1 2253
+18 3 3 1779 12 20 155609
+19 1 1 1167 5 11 39266
+20 2 2 1167 7 10 30505
+21 12 20 1459600 6 15 12099
+22 15 30 714173 15 34 212030
+23 5 5 5869 20 30 603752
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 8
+us 126 229 8035431
+nl 12 12 1779
+in 9 24 859863
+ca 3 3 3501
+de 2 2 1186
+gb 1 1 1167
+ru 1 1 4452
+fr 1 8 642777
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 11
+Googlebot/ 51 450215 20181129120742 7
+bingbot/ 24 9663 20181130153944 9
+unknown 6 144 20181129102406 6
+no_user_agent 4 7981 20181125131005 0
+Baiduspider/ 2 24 20181130105644 1
+DomainCrawler/ 2 1191 20181130042702 1
+(firefox/)([0-9]\.|[0-1][0]\.) 2 1186 20181125045322 0
+DuckDuckGo\-Favicons\-Bot/ 2 1740 20181124084441 0
+MJ12bot/ 2 1191 20181126203319 1
+Uptimebot/ 2 48 20181128082637 2
+Googlebot\-Image/ 1 8057 20181124010619 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 9
+jpeg 19 758220 0 0
+png 20 96684 0 0
+php 1 24287 0 0
+Unknown 34 40418 0 0
+js 29 1733169 0 0
+jpg 17 6540460 0 0
+svg 3 9759 0 0
+css 37 198482 0 0
+html 120 148677 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 10
+macosx12 4 4
+win7 15 13
+macosx10 1 1
+win8 2 1
+Unknown 15 13
+linuxandroid 36 10
+win8.1 58 35
+ios_iphone 26 6
+linux 116 65
+win10 7 7
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 20
+mozilla 2 2
+chrome61.0.3163.100 6 6
+firefox63.0 13 9
+chrome60.0.3112.101 1 1
+firefox59.0 1 1
+chrome49.0.2623.75 2 2
+chrome70.0.3538.80 35 9
+safari12.0 6 1
+chrome70.0.3538.110 105 55
+firefox64.0 4 4
+chrome69.0.3497.100 2 2
+chrome58.0.3025.0 58 35
+chrome65.0.3325.162 1 1
+chrome36.0.1985.143 4 4
+chrome45.0.2454.94 1 1
+Unknown 13 11
+chrome34.0.1847.131 3 3
+safari11.0 20 5
+netscape5.0 2 2
+opera53.0.2907.68 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 4
+Go-http-client/1.1 20181130211507
+Mozilla/5.0_(compatible;_Dataprovider.com) 20181124094158
+Ruby 20181122160803
+Twisted_PageGetter 20181125045337
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 3
+Ruby 20181122160803
+Twisted_PageGetter 20181125045337
+Go-http-client/1.1 20181130211507
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 100 103
+From1 0 0
+From2 1 1
+From3 10 10
+From4 44 166
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+www_google_com 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+https://uptime.com/core2creations.com 10 10
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 6
+206 1 1633
+500 49 985950
+302 14 3581
+405 1 43476
+301 5 1215
+404 212 499739
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 143
+/events.php 1 -
+/admin-all-menu.html 1 -
+/admin-job-edit.html 1 -
+/admin-job-add.html 1 -
+/about.php 1 -
+/db-exams.html 1 -
+/admin-seminar-edit.html 1 -
+/awards.html 1 -
+/maps.php 1 -
+/admin-admission-menu.html 1 -
+/admin-student-details.html 1 -
+/wordpress/wp-includes/wlwmanifest.xml 1 -
+/facilities.html 1 -
+/admin-quick-link.html 1 -
+/wp-snapshots/tmp/installer-backup.php 2 -
+/admin-view-enquiry.html 1 -
+/bg.jpg 1 http://core2creations.com/
+/wp-includes/class-walker-nav-menu.php 1 -
+/imprima.php 1 -
+/wp-admin/setup-config.php 4 -
+/ads.txt 11 -
+/wp-snapshots/tmp/installer.php 2 -
+/wp-content/plugins/wp-gdpr-compliance/assets/js/admin.js 2 -
+/admission.html 1 -
+/wp-snapshots/installer-backup.php 2 -
+/.env 1 -
+/wp-content/plugins/poka-module/assets/jquery-file-upload/server/php/index.php 1 -
+/searchreplacedb2.php 4 -
+/images/h-adm1.jpg 1 -
+/blog/wp-includes/wlwmanifest.xml 1 -
+/contact-us.php 1 -
+/site/wp-includes/wlwmanifest.xml 1 -
+/wp-includes/images/hon2our.php 1 -
+/svg/500.svg 7 http://core2creations.com/public/
+/wp-content/plugins/recipes-manager/lib/scripts/jquery-file-uploader/server/php/index.php 1 -
+/header-cache.php 2 -
+/admin-login.html 1 -
+/.git/info/refs 1 -
+/blog-details.html 1 -
+/wp/wp-includes/wlwmanifest.xml 1 -
+/wp-config.php~ 1 -
+/seminar.html 1 -
+/admin-event-add.html 1 -
+/assets/plugins/blueimp/server/php/index.php 1 -
+/admin-event-enquiry.html 1 -
+/wp-includes/js/tinymce/global.php 1 -
+/license.php 1 -
+/admin-user-all.html 1 -
+/courses.php 2 -
+/admin-event-edit.html 1 -
+/Marvin.php 1 -
+/wp-snapshots/installer.php 2 -
+/wp-content/plugins/myshe.php 1 -
+/.trash/installer.php 2 -
+/robots.txt 1 -
+/wp-blog-config.php 1 -
+/wp-content/plugins/rnnvhs.php 1 -
+/all-courses.html 1 -
+/wp-includes/wlwmanifest.xml 1 -
+/admin-setting.html 1 -
+/dashboard.html 1 -
+/assets/images/header-cache.php 2 -
+/wp-config.txt 1 -
+/wp-content/index.php 1 -
+/wp-content/plugins/woocommerce-product-options/includes/image-upload.php 2 -
+/course-details.html 1 -
+/admin-import-data.html 1 -
+/wp-content/plugins/kiwi-social-share/assets/js/kiwi.min.js 2 -
+/wp-content/plugins/all-in-one-seo/all-in-one-seo.php 1 -
+/admin-course-enquiry.html 1 -
+/_wpeprivate/config.json 1 -
+/about.html 1 -
+//xmlrpc.php 1 http://www.google.com.hk
+/wp-content_plugins_akismet_widget.php 1 -
+/admin-forgot.html 1 -
+/admin-course-details.html 1 -
+/ludk.php 1 -
+/wp-config-backup.txt 1 -
+/installer-backup.php 4 -
+/admin-seminar-all.html 1 -
+/ 20 -
+/admin-job-all.html 1 -
+/installer.php 4 -
+/db-time-line.html 1 -
+/db-courses.html 1 -
+/admin-page-edit.html 1 -
+/admin-slider.html 1 -
+/admin-user-add.html 1 -
+/wp-admin/includes/images.php 1 -
+/facilities-detail.html 1 -
+/wp-admin/admin-ajax.php 5 -
+/wp-content/plugins/ultimate-member/assets/js/um-scripts.js 4 -
+/departments.html 1 -
+/phpmyadmin 1 http://core2creations.com/phpmyadmin
+/admin-main-menu.html 1 -
+/wp-content/plugins/tajer/lib/jQuery-File-Upload-master/server/php/files/shell.php 1 -
+/wp-content/plugins/fluid_forms/file-upload/server/php/index.php 1 -
+/plus/recommend.php 1 http://core2creations.com/plus/recommend.php
+/wp_honor.php 1 -
+/error-logs.php 1 -
+/wp-config.bak 1 -
+/core2creation.png 2 http://core2creations.com/
+/event-details.html 1 -
+/wp-includes/pomo/w7388n.php 1 -
+/admin-exam-edit.html 1 -
+/admin-seminar-add.html 1 -
+/wp-content/uploads/file-manager/log.txt 1 -
+/news/html 1 http://core2creations.com/news/html
+/wp-content/plugins/developers-ajax-file-uploadserver/php/index.php 1 -
+/admin-page-add.html 1 -
+/admin-event-all.html 1 -
+/admin-export-data.html 1 -
+/gallery-photo.html 1 -
+/wp-admin/home.bak.php 1 -
+/xmlrpc.php 1 -
+/wp-content/plugins/formcraft/file-upload/server/php/index.php 1 -
+/admin-courses.php 1 -
+/event-register.html 1 -
+/js/mage/cookies.js 3 core2creations.com
+/admin-about-menu.html 1 -
+/assets/plugins/jquery-file-upload/server/php/index.php 1 -
+/admin-exam-add.html 1 -
+/wp-content/plugins/smart-google-code-inserter/screenshot1.jpg 2 -
+/admin-admission-enquiry.html 1 -
+/db-profile.html 1 -
+/admin-slider-edit.html 1 -
+/admin.html 1 -
+/admin-seminar-enquiry.html 1 -
+/assets/components/gallery/css/mgr.css 1 http://core2creations.com/assets/components/gallery/css/mgr.css
+/admin-all-enquiry.html 1 -
+/wp-admin/theme-uploader.php 1 -
+/admin-page-all.html 1 -
+/blog.html 1 -
+/admin-panel-setting.html 1 -
+/research.html 1 -
+/index-1.html 1 -
+/sitemap.xml 1 -
+/cms/wp-includes/wlwmanifest.xml 1 -
+/admin-add-courses.html 1 -
+/admin-exam-all.html 1 -
+/admin-common-enquiry.html 1 -
+//wp-login.php 1 http://www.google.com.hk
+/wp-content/uploads/wp-config-backup.txt 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 57
+157.39.163.246 17 33 1515112 20181122221645
+157.39.217.175 15 23 679914 20181124064541
+157.39.219.183 14 25 1153160 20181122090719
+157.39.213.206 11 18 615956 20181121232304
+157.39.248.38 10 16 152150 20181122105541
+157.36.199.122 8 19 670762 20181124123638
+157.39.59.49 5 7 7005 20181121112444
+171.48.103.177 4 9 193539 20181123032805
+52.53.201.78 4 4 2372 20181130001345
+66.249.82.150 4 10 1006033 20181123091221
+157.39.188.146 4 6 3526 20181126103307
+198.12.131.80 3 3 1009 20181120113035
+167.114.172.225 3 3 3501 20181124094200
+157.39.254.55 3 12 645003 20181123005932
+159.69.82.181 2 2 1186 20181130061718
+45.55.7.5 2 2 1186 20181130184238
+35.243.167.237 2 2 2334 20181130020839
+80.84.251.93 2 2 1186 20181124063716
+104.227.246.106 2 2 2334 20181128155323
+106.205.164.57 2 4 14790 20181123032817
+157.39.128.148 2 9 120551 20181123112123
+46.166.188.251 2 2 0 20181130204122
+176.9.197.138 2 2 1186 20181124042936
+157.39.235.217 2 5 574100 20181122124839
+31.184.238.11 1 1 4452 20181122041438
+66.102.6.210 1 1 593 20181129061932
+106.78.81.31 1 6 558412 20181122090154
+122.173.234.230 1 2 8650 20181128000559
+76.8.61.187 1 1 593 20181129080739
+184.168.224.230 1 1 1145 20181122160803
+64.233.173.15 1 1 32 20181120113045
+106.78.73.136 1 3 84472 20181129060544
+157.39.244.32 1 1 24287 20181121214738
+66.249.82.149 0 5 271769 
+64.233.172.8 1 1 593 20181130052751
+64.233.173.16 1 1 593 20181123104655
+157.39.200.83 1 1 32 20181120121322
+64.246.178.34 1 1 593 20181129102407
+46.166.137.217 1 1 0 20181129005055
+37.171.144.45 1 8 642777 20181123072833
+157.39.200.88 1 1 24287 20181120213652
+46.166.190.168 1 1 593 20181126131102
+109.201.152.21 1 1 0 20181130211507
+23.92.217.133 1 1 593 20181129080828
+109.201.152.234 1 1 0 20181128082641
+46.166.190.163 1 1 0 20181130002759
+52.114.75.71 1 1 3964 20181126102935
+35.176.185.235 0 2 16114 
+51.68.154.199 1 1 1167 20181126191600
+52.114.14.102 1 1 5621 20181123072823
+64.233.173.17 0 2 0 
+109.201.154.138 1 1 0 20181130110226
+109.201.154.172 1 1 0 20181129221549
+109.201.154.213 1 1 0 20181126131056
+52.165.166.139 1 1 593 20181123040140
+173.212.240.51 1 1 1167 20181127205204
+66.249.82.148 1 7 529169 20181123091221
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 11
+20181120 6 6 25360 4
+20181121 17 26 647248 3
+20181122 46 87 3958531 7
+20181123 21 71 3439088 11
+20181124 30 49 1356549 6
+20181125 1 2 8650 1
+20181126 8 10 9250 5
+20181127 2 2 1760 2
+20181128 4 5 10984 3
+20181129 8 10 86844 8
+20181130 12 12 5892 9
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 5
+5mn-15mn 1
+2mn-5mn 5
+15mn-30mn 2
+30mn-1h 5
+0s-30s 46
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 9
+/ 115 148178 56 54
+/login 20 25039 1 2
+/public/ 5 499 1 1
+/register 4 5001 0 0
+/home 4 4272 0 0
+/password/reset 3 3199 0 0
+/email/verify 2 2314 0 1
+/signup 1 593 0 0
+/phpinfo.php 1 24287 1 1
+END_SIDER

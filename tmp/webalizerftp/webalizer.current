@@ -1,0 +1,190 @@
+# Webalizer V2.23-05 Incremental Data - 01/05/2019 09:30:54
+2019 1 5 9 30 54
+176 176 4 28 0 0 1377575 4 1 1
+2 9 71 1 5
+20 20 56434 1 0 0
+12 12 66218 1 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+144 144 1254923 2 4 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+15 15 49317 0
+43 43 582413 0
+41 41 270887 0
+21 21 110072 0
+15 15 199133 0
+9 9 43101 4
+14 14 50141 0
+6 6 6293 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+8 8 60320 0
+4 4 5898 0
+0
+0
+0
+176
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/home/wvu53ld49caz/public_html/mahindra/app/User.php
+0 1 0 2213 0 0
+/home/wvu53ld49caz/public_html/mahindra/resources/views/users/show.blade.php
+0 1 0 2366 0 0
+/home/wvu53ld49caz/resources/views/auth/passwords/reset.blade.php
+0 3 0 9117 0 0
+/home/wvu53ld49caz/public_html/mahindra/app/Http/Controllers/UserController.php
+0 1 0 4807 0 0
+/home/wvu53ld49caz/public_html/mahindra/resources/views/layouts/app.blade.php
+0 2 0 13312 0 0
+/home/wvu53ld49caz/resources/views/home.blade.php
+0 10 0 12218 0 0
+/home/wvu53ld49caz/public_html/mahindra/resources/views/shifts/
+0 4 0 12621 1 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/isotope.js
+0 5 0 136779 0 0
+/home/wvu53ld49caz/app/Http/Controllers/HomeController.php
+0 7 0 4919 0 0
+/home/wvu53ld49caz/resources/views/auth/passwords/email.blade.php
+0 4 0 3793 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/layout-modes/vertical.js
+0 1 0 1103 0 0
+/home/wvu53ld49caz/public_html/mahindra/routes/web.php
+0 2 0 1603 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/layout-modes/masonry.js
+0 1 0 1838 0 0
+/home/wvu53ld49caz/resources/views/auth/login.blade.php
+0 1 0 3594 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/isotope-docs.min.js
+0 4 0 167654 0 0
+/home/wvu53ld49caz/public_html/mahindra/app/Http/Controllers/ShiftController.php
+0 2 0 8104 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/layout-modes/fit-rows.js
+0 1 0 1397 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/layout-mode.js
+0 1 0 4020 0 0
+/home/wvu53ld49caz/public_html/male_dp.jpeg
+0 1 0 3014 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/item.js
+0 1 0 1767 0 0
+/home/wvu53ld49caz/resources/views/layouts/front.blade.php
+0 4 0 64444 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/js/isotope.pkgd.js
+0 1 0 91398 0 0
+/home/wvu53ld49caz/public_html/mahindra/app/Http/Controllers/HomeController.php
+0 14 0 12786 0 0
+/home/wvu53ld49caz/resources/views/welcome.blade.php
+0 1 0 19318 0 0
+/home/wvu53ld49caz/public_html/mahindra/app/Shift.php
+0 1 0 287 0 0
+/home/wvu53ld49caz/public_html/mahindra/resources/views/screen.blade.php
+0 98 0 745031 0 0
+/home/wvu53ld49caz/public_html/mahindra/public/css/isotope-docs.css
+0 3 0 45837 0 0
+/home/wvu53ld49caz/public_html/female_dp.jpeg
+0 1 0 2235 0 0
+# End Of Table - urls
+# -sites- (monthly)
+157.39.189.255
+0 20 20 56434 0 0
+-
+157.39.157.37
+0 12 12 66218 0 0
+-
+157.36.137.44
+0 9 9 43101 1 1546680654
+/home/wvu53ld49caz/public_html/mahindra/resources/views/shifts/
+157.36.133.122
+0 135 135 1211822 0 0
+-
+# End Of Table - sites (monthly)
+# -sites- (daily)
+157.36.137.44
+0 9 9 43101 1 1546680654
+/home/wvu53ld49caz/public_html/mahindra/resources/views/shifts/
+157.36.133.122
+0 135 135 1211822 0 0
+-
+# End Of Table - sites (daily)
+# -referrers- 
+# End Of Table - referrers
+# -agents- 
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+admin@core2creations.com
+0 176 176 1377575 2 1546680654
+# End Of Table - usernames

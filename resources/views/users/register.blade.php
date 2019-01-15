@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
-<section class="banner-text">
+<section class="banner-text signup">
 <div class="container">
         <div class="inner-form">
         <form method="POST" data-aos="zoom-in-up" action="{{ route('register') }}">

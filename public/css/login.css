@@ -1,0 +1,135 @@
+.login-form {  
+    padding: 10% 0;
+    text-align: center;
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    z-index: 9999999999;
+}
+.login-form-inner {
+    width: 400px;
+    margin: auto;
+    clear: both;
+    border-radius: 10px;
+    padding: 18px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    background: #f0f2f7;
+    overflow: inherit;
+    position: relative;
+}
+.login-form-inner h2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0;
+}
+.email input {
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.email input:focus {
+    border: 1px solid #8f6a5a;
+    outline: 0;
+}
+.forgot-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 20px 0;
+}
+.remember span {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+.remember input {
+    margin: 0px 4px;
+}
+.forgot a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+.forgot a:hover {
+    color: #9e5231;
+}
+.login-button input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #8f6a5a;
+    background: #8f6a5a;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 0 10px 0px;
+    text-transform: uppercase;
+}
+.login-button input:hover {
+    background: #4a3b3e;
+    border: 1px solid #4a3b3e;
+}
+.facebook-button input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #4a3b3e;
+    background: #4a3b3e;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 0 10px 0px;
+    text-transform: uppercase;
+}
+.facebook-button input:hover {
+    background: #8f6a5a;
+    border: 1px solid #8f6a5a;
+}
+.account-register {
+    padding: 10px 0;
+}
+.account-register span {
+    font-size: 15px;
+}
+.account-register a {
+    font-size: 15px;
+    color: #000;
+}
+.OR {
+    padding: 10px 0;
+}
+.OR span:before {
+    position: absolute;
+    content: "";
+    background:#a3a3a3;
+    width: 25px;
+    height: 1px;
+    left: -30px;
+    top: 7px;
+}
+.OR span:after {
+    position: absolute;
+    content: "";
+    background: #a3a3a3;
+    width: 25px;
+    height: 1px;
+    right: -30px;
+    top: 7px;
+}
+.OR span {
+    position: relative;
+    color: #a3a3a3;
+}
+.login-form-inner .cross-button {
+    position: absolute;
+    right: -13px;
+    top: -15px;
+    cursor: pointer;
+}

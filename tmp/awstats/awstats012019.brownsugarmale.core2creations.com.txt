@@ -1,0 +1,297 @@
+AWSTATS DATA FILE 7.6 (build 20161204)
+# If you remove this file, all statistics for date 201901 will be lost/reset.
+# Last config file used to build this data file was /home/wvu53ld49caz/tmp/awstats/awstats.brownsugarmale.core2creations.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2034                
+POS_TIME 2709                
+POS_VISITOR 6749                
+POS_DAY 7648                
+POS_DOMAIN 3314                
+POS_LOGIN 3562                
+POS_ROBOT 3717                
+POS_WORMS 3849                
+POS_EMAILSENDER 3980                
+POS_EMAILRECEIVER 4123                
+POS_SESSION 7847                
+POS_SIDER 8043                
+POS_FILETYPES 4258                
+POS_DOWNLOADS 4494                
+POS_OS 4542                
+POS_BROWSER 4684                
+POS_SCREENSIZE 4851                
+POS_UNKNOWNREFERER 4925                
+POS_UNKNOWNREFERERBROWSER 5012                
+POS_ORIGIN 5094                
+POS_SEREFERRALS 5229                
+POS_PAGEREFS 5373                
+POS_SEARCHWORDS 5521                
+POS_KEYWORDS 5673                
+POS_MISC 2372                
+POS_ERRORS 5732                
+POS_CLUSTER 3418                
+POS_SIDER_404 5857                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20190107205613 2 198 11994224325250
+FirstTime 20190101012518
+LastTime 20190107205612
+LastUpdate 20190108051838 2 0 2 0 0
+TotalVisits 24                  
+TotalUnique 19                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 20                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+AddToFavourites 0 35 0
+DirectorSupport 0 0 0
+QuickTimeSupport 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+RealPlayerSupport 0 0 0
+JavaEnabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+FlashSupport 0 0 0
+TotalMisc 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 6 66 657795 0 4 9048
+1 5 57 2396629 1 5 7051
+2 0 0 0 0 0 0
+3 0 0 0 0 0 0
+4 6 60 955824 0 4 4524
+5 0 0 0 0 0 0
+6 1 1 5095 0 2 0
+7 0 0 0 0 0 0
+8 0 0 0 0 0 0
+9 11 68 909590 0 7 13572
+10 13 24 78094 8 31 167864
+11 22 292 6768845 5 32 179897
+12 21 193 3632223 6 39 77729
+13 1 1 3600 0 3 6786
+14 5 59 654224 0 2 4524
+15 0 0 0 0 0 0
+16 0 0 0 0 0 0
+17 0 0 0 0 0 0
+18 0 0 0 0 0 0
+19 0 0 0 0 0 0
+20 1 1 5118 0 1 0
+21 0 0 0 0 0 0
+22 16 125 1332497 8 29 52026
+23 10 71 1304483 3 19 94193
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 2
+us 99 785 12963865
+in 19 233 5740152
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 9
+jpg 51 4206091 0 0
+svg 2 3214 0 0
+woff 28 3030344 0 0
+html 59 2661450 0 0
+js 207 2376850 0 0
+Unknown 31 130477 0 0
+png 322 4408139 0 0
+css 309 1876954 0 0
+jpeg 9 10498 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 5
+ios_iphone 120 7
+win10 118 10
+linux 232 51
+linuxandroid 172 12
+win8.1 376 38
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 5
+chrome49.0.2623.75 6 6
+safari11.0 120 7
+chrome58.0.2988.0 376 38
+chrome71.0.3578.99 172 12
+chrome71.0.3578.98 344 55
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 32 32
+From1 0 0
+From2 0 0
+From3 0 0
+From4 86 986
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+500 8 327961
+404 127 287274
+302 6 1449
+301 2 530
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 9
+/about-us.html 2 http://brownsugarmale.core2creations.com/contact
+/password/images/logo.png 4 http://brownsugarmale.core2creations.com/password/reset
+/NEEL_DATING/BSM/img/country-fre.png 2 http://brownsugarmale.core2creations.com/NEEL_DATING/BSM/
+/vendors/material-icon/css/materialdesignicons.min.css.map 6 -
+/css/style.css.map 6 -
+/NEEL_DATING/BSM/img/country-aus.png 3 http://brownsugarmale.core2creations.com/NEEL_DATING/BSM/
+/forgot-password 1 -
+/img/country-fre.png 48 http://brownsugarmale.core2creations.com/
+/img/country-aus.png 55 http://brownsugarmale.core2creations.com/
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 20
+157.39.189.255 25 95 991603 20190101110649
+157.39.157.37 15 72 691571 20190102231250
+103.41.26.196 10 118 2103794 20190102224116
+103.41.26.97 9 115 3636358 20190102114301
+157.39.115.202 8 39 750046 20190101132529
+157.39.139.85 8 116 1888842 20190102115641
+157.39.81.24 5 35 529190 20190102001241
+157.36.133.122 5 59 950707 20190105043612
+157.39.173.0 5 59 654228 20190104123445
+157.39.247.181 5 57 2396629 20190101012559
+157.39.135.158 5 59 654224 20190103140505
+157.39.25.68 4 37 781959 20190101122007
+157.39.142.160 4 63 1280993 20190102233422
+66.102.6.117 2 2 10212 20190107205612 20190107205612 /
+64.233.173.23 2 21 473789 20190102114906
+66.102.6.43 2 2 10211 20190105043552
+66.102.6.115 2 2 10213 20190103223755
+64.233.173.21 1 11 207904 20190102114904
+157.39.37.136 1 31 128605 20190102000543
+64.233.173.22 0 25 552939 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 6
+20190101 43 229 4925331 6
+20190102 57 609 11504174 12
+20190103 6 60 659342 2
+20190104 5 59 654228 1
+20190105 6 60 955824 2
+20190107 1 1 5118 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 6
+5mn-15mn 5
+30mn-1h 1
+1h+ 1
+15mn-30mn 1
+30s-2mn 1
+0s-30s 14
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 14
+/ 27 137777 16 10
+/fonts/fontawesome-webfont3e6e.html 15 1153185 1 0
+/home 14 75260 0 3
+/fonts/fontawesome-webfont3e6e.woff 14 1370782 0 4
+/vendors/material-icon/fonts/materialdesignicons-webfont8d40.html 12 1115760 1 0
+/vendors/material-icon/fonts/materialdesignicons-webfont8d40.woff 11 1341758 1 3
+/password/reset 8 23987 0 0
+/contact 5 17989 2 2
+/login 4 13241 1 0
+/NEEL_DATING/BSM/fonts/fontawesome-webfont3e6e.html 2 153758 0 0
+/NEEL_DATING/BSM/fonts/fontawesome-webfont3e6e.woff 2 195826 0 1
+/NEEL_DATING/BSM/ 2 7990 2 0
+/NEEL_DATING/BSM/vendors/material-icon/fonts/materialdesignicons-webfont8d40.woff 1 121978 0 0
+/NEEL_DATING/BSM/vendors/material-icon/fonts/materialdesignicons-webfont8d40.html 1 92980 0 0
+END_SIDER

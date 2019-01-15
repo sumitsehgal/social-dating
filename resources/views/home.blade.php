@@ -1,23 +1,31 @@
-@extends('layouts.app')
+@extends('layouts.front')
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+   <section class="register_members_slider">
+            <div class="container">
+                <div class="welcome_title">
+                    <h3>Suggestions</h3>
+                    <img src="{{ asset('img/w-title-b.png') }}" alt="">
+                </div>
+                <div class="r_members_inner">
+                    @if(!empty($users))
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                        @foreach($users as $user)
+                            <div class="item">
+                                @if($user->gender == 'Male')
+                                    <img src="{{ asset('male_dp.jpeg') }}" alt="">
+                                @else
+                                    <img src="{{ asset('female_dp.jpeg') }}" alt="">
+                                @endif
+                                <h4>{{$user->name}}</h4>
+                                <h5> @if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}}  @endif years old</h5>
+                            </div>
+                        @endforeach
+
                     @endif
-
-                    You are logged in!
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 </div>
 @endsection
