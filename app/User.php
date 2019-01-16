@@ -28,4 +28,15 @@ class User extends Authenticatable //implements MustVerifyEmail
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    const MALE_GENDER = 'Male',
+        FEMALE_GENDER = 'FEMALE';
+
+    const ONLINE_TIME_WINDOW = 5;
+
+    public function isOnline()
+    {
+        $currentAt =  \Carbon\Carbon::now()->subMinutes(self::ONLINE_TIME_WINDOW); // Currently Online Window is 5 Minutes
+        return ($this->lastActivity >= $currentAt);
+    }
 }

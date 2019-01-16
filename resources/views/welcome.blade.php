@@ -24,6 +24,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
+                            @if(!Auth::check())
                             <div class="registration_form_s">
                                 <h4>Registration</h4>
                                 <form  method="POST" action="{{ route('register') }}" id="home-registration">
@@ -75,6 +76,7 @@
                                     </div>
                                 </form>
                             </div>
+                            @endif
                         </div>
                         <div class="col-sm-6">
                             <!-- <div class="form_man">
@@ -98,28 +100,28 @@
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
                             <img src="{{ asset('img/welcome-icon/w-icon-1.png') }}" alt="">
-                            <h4 class="counter">100</h4>
+                            <h4 class="counter">{{$users->total()}}</h4>
                             <h6>Total Members</h6>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
                             <img src="{{ asset('img/welcome-icon/w-icon-2.png') }}" alt="">
-                            <h4 class="counter">40</h4>
+                            <h4 class="counter">{{ $onlineMale + $onlineFemale }}</h4>
                             <h6>Members online</h6>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
                             <img src="{{ asset('img/welcome-icon/w-icon-3.png') }}" alt="">
-                            <h4 class="counter">30</h4>
+                            <h4 class="counter">{{$onlineMale}}</h4>
                             <h6>Men online</h6>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
                             <img src="{{ asset('img/welcome-icon/w-icon-4.png') }}" alt="">
-                            <h4 class="counter">10</h4>
+                            <h4 class="counter">{{$onlineFemale}}</h4>
                             <h6>Women online</h6>
                         </div>
                     </div>
@@ -127,63 +129,6 @@
             </div>
         </section>
         <!--================End Welcome Area =================-->
-
-
-
-
-
-<!--
-<section class="banner-text">
-    <div class="login-form">
-		<div class="login-form-inner" data-aos="zoom-in-up">
-		    <h2>{{ __('LOGIN') }}</h2>
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-                <div class="email">
-                    <input type="text"  placeholder="Email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-                    @if ($errors->has('email'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                    @endif
-                </div>
-                <div class="email password">
-                    <input type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-                    @if ($errors->has('password'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                    @endif
-                </div>
-                <div class="forgot-wrapper">
-                    <div class="remember">
-                        <input type="checkbox"  name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> <span>Remember me</span>
-                    </div>
-                    <div class="forgot">
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                        </a>
-                    </div>
-                </div>
-                <div class="login-button">
-                    <input type="submit" value="LOGIN">
-                </div>
-                <div class="OR">
-                    <span>OR</span>
-                </div>
-                <div class="facebook-button">
-                    <a href="{{ url('login/google') }}" class="btn btn-social-icon btn-google-plus">G+ LogIn</a>
-                </div>
-                <div class="account-register">
-                    <span>Don't have an account?</span>
-                    <a href="/signup">SIGNUP NOW!</a>
-                </div>
-            </form>
-		</div>
-    </div>
-</section>
-
--->
 
 
 <!--================Download Area =================-->
@@ -338,46 +283,19 @@
                     <img src="{{ asset('img/w-title-b.png') }}" alt="">
                 </div>
                 <div class="r_members_inner">
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-1.png') }}" alt="">
-                        <h4>Rocky Ahmed</h4>
-                        <h5>22 years old</h5>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-2.png') }}" alt="">
-                        <h4>Alex Jones</h4>
-                        <h5>23 years old</h5>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-3.png') }}" alt="">
-                        <h4>Nancy Martin</h4>
-                        <h5>25 years old</h5>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-4.png') }}" alt="">
-                        <h4>Kavin Smith</h4>
-                        <h5>20 years old</h5>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-5.png') }}" alt="">
-                        <h4>Lena Adms</h4>
-                        <h5>26 years old</h5>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-6.png') }}" alt="">
-                        <h4>Peter Nevill</h4>
-                        <h5>20 years old</h5>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-2.png') }}" alt="">
-                        <h4>Alex Jones</h4>
-                        <h5>23 years old</h5>
-                    </div>
-                    <div class="item">
-                        <img src="{{ asset('img/members/r_members-3.png') }}" alt="">
-                        <h4>Nancy Martin</h4>
-                        <h5>25 years old</h5>
-                    </div>
+                    @if($users->isNotEmpty())
+                        @foreach($users as $user)
+                            <div class="item">
+                                @if($user->gender == 'Male')
+                                    <img src="{{ asset('male_dp.jpeg') }}" alt="">
+                                @else
+                                    <img src="{{ asset('female_dp.jpeg') }}" alt="">
+                                @endif
+                                <h4>{{$user->name}}</h4>
+                                <h5>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}}  @endif years old</h5>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </section>

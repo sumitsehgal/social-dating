@@ -49,7 +49,14 @@ class HomeController extends Controller
     public function welcome()
     {
         $plans = Plan::all();
-        return view('welcome', compact('plans'));
+        $users = User::paginate();
+        $onlineMale = User::where('gender', User::MALE_GENDER)
+                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW)
+                            ->count();
+        $onlineFemale = User::where('gender', User::FEMALE_GENDER)
+                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW)
+                            ->count();
+        return view('welcome', compact('plans', 'users', 'onlineMale', 'onlineFemale'));
     }
 
     public function about()
