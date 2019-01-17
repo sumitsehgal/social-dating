@@ -8,8 +8,8 @@
             <div class="container">
                 <div class="banner_content">
                     <h3 title="Contact us"><img class="left_img" src="img/banner/t-left-img.png" alt="">Contact us<img class="right_img" src="img/banner/t-right-img.png" alt=""></h3>
-                    <a href="index.html">Home</a>
-                    <a href="matches.html">Contact us</a>
+                    <a href="/">Home</a>
+                    <a href="/contact">Contact us</a>
                 </div>
             </div>
         </section>
