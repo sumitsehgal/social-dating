@@ -170,6 +170,11 @@
                         <li class=" {{ request()->is('/') ? 'active' : '' }}">
                             <a href="/" >Home</a>
                         </li>
+                        @if (Route::has('login'))
+                            @auth
+                                <li class="{{ request()->is('home') ? 'active' : '' }}"><a href="/home">Dashboard</a></li>
+                            @endauth
+                        @endif
                         <li class="{{ request()->is('about-us') ? 'active' : '' }}"><a href="/about-us">About Us</a></li>
                         <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
                     </ul>
