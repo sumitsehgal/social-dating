@@ -42,7 +42,7 @@
                                         <input type="password" class="form-control" id="reg_pass2" placeholder="Password"  name="password" required>
                                     </div>
                                     <div class="form-group">
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                        <input id="password-confirm" type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" required>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -99,7 +99,7 @@
                 <div class="row">
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
-                            <img src="{{ asset('img/welcome-icon/w-icon-1.png') }}" alt="">
+                            <img src="{{ asset('images/w-icon-1.png') }}" alt="">
                             <h4 class="counter">{{$users->total()}}</h4>
                             <h6>Total Members</h6>
                         </div>
@@ -177,8 +177,27 @@
                             <div class="col-md-5">
                                 <div class="download_moblie">
                                     <div class="download_m_slider">
-                                        <img src="{{ asset('img/mobile-slider/mobile-1.png') }}" alt="">
-                                          
+                                        <img src="img/mobile-slider/mobile-1.png" alt="">
+                                            <div class="download_moblile_slider">
+                                                <div class="item">
+                                                    <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
+                                                    Coming Soon
+                                                </div>
+                                                <div class="item">
+                                                    <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
+                                                    Coming Soon
+                                                </div>
+                                                <div class="item">
+                                                    <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
+                                                    Coming Soon
+                                                </div>
+                                                <!-- <div class="item">
+                                                    <img src="img/mobile-slider/screen-1.png" alt="">
+                                                </div>
+                                                <div class="item">
+                                                    <img src="img/mobile-slider/screen-1.png" alt="">
+                                                </div> -->
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +218,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="find_soul_item">
-                            <img src="{{ asset('img/soul-icon/soul-1.png') }}" alt="">
+                            <img src="{{ asset('images/soul-1.png') }}" alt="">
                             <h4>Create a profile</h4>
                             <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
                         </div>
@@ -213,7 +232,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="find_soul_item">
-                            <img src="{{ asset('img/soul-icon/soul-3.png') }}" alt="">
+                            <img src="{{ asset('images/soul-3.png') }}" alt="">
                             <h4>Start Dating</h4>
                             <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
                         </div>
