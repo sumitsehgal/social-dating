@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<!-- Mirrored from html.verodate.com/verodate/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 08:41:51 GMT -->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <!-- <link rel="icon" href="{{ asset('img/fav-icon.png" type="image/x-icon') }}" /> -->
+        <link rel="icon" href="{{ asset('img/fav-icon.png" type="image/x-icon') }}" />
         <title>Brown Sugar Male - Dating Social Network Website</title>
         <link href="{{ asset('vendors/material-icon/css/materialdesignicons.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
@@ -30,9 +28,9 @@
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
        
-        <script src="{{ asset('js/map-custome.js') }}"></script>
+        <script src="{{ asset('js/map-custome.js') }}"></script> -->
 
 
     </head>
@@ -57,7 +55,7 @@
                 @endif
                <div class="login_btn_area">
                    <button type="submit" value="LogIn" class="btn form-control login_btn">LogIn</button>
-                   <a class="btn btn-link" href="{{ route('password.request') }}">
+                   <a class="btn btn-link forgot popup-with-zoom-anim" href="#forgot-dialog">
                         {{ __('Forgot Your Password?') }}
                     </a>
                    <div class="login_social">
@@ -97,7 +95,7 @@
                                 <input type="password" class="form-control" id="reg_pass" placeholder="Password" name="password" required>
                             </div>
                             <div class="form-group">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" required>
                             </div>
                             <div class="form-group">
                                 <!-- <div class="btn-group">
@@ -134,6 +132,23 @@
                 </div>
             </div>
         </div>
+        <div class="login_form_inner zoom-anim-dialog mfp-hide" id="forgot-dialog">
+           <h4>Forgot Password</h4>
+           <form method="POST" action="{{ route('login') }}" id="lgn-frm">
+                @csrf
+                <div id="errs"></div>
+               <input type="email"  placeholder="Email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required id='lg-email'>
+               @if ($errors->has('email'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
+               <div class="login_btn_area">
+                   <button type="submit" value="LogIn" class="btn form-control login_btn">Submit</button>
+               </div>
+           </form>
+           <img class="mfp-close" src="{{ asset('img/close-btn.png') }}" alt="">
+        </div>
        
         <!--================Frist Main hader Area =================-->
         <header class="header_menu_area">
@@ -147,7 +162,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="/images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="/"><img src="/images/logo1.png" alt="Logo"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -156,7 +171,7 @@
                             <a href="/" >Home</a>
                         </li>
                         <li class="{{ request()->is('about-us') ? 'active' : '' }}"><a href="/about-us">About Us</a></li>
-                        <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="/contact">Contact us</a></li>
+                        <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @if (Route::has('login'))
@@ -215,7 +230,7 @@
             <div class="copyright">
                 <div class="copyright_left">
                     <div class="copyright_text">
-                        <h4>Copyright &copy; 2018. <a href="#">Brown Sugar Male</a></h4>
+                        <h4>Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Brown Sugar Male</h4>
                     </div>
                 </div>
                 <div class="copyright_right">
@@ -223,12 +238,6 @@
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                           <!--  <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -272,5 +281,4 @@
 
     </body>
 
-<!-- Mirrored from html.verodate.com/verodate/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 08:43:34 GMT -->
 </html>
