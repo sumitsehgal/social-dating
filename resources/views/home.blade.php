@@ -1,7 +1,17 @@
 @extends('layouts.front')
 
 @section('content')
-<div class="container">
+
+<!--================Banner Area =================-->
+        <section class="banner_area banner_area2">
+            <div class="container">
+                <div class="banner_content">
+                    <h3 title="Members"><img class="left_img" src="img/banner/t-left-img.png" alt="">Members<img class="right_img" src="img/banner/t-right-img.png" alt=""></h3>
+                    <a href="/">Home</a>
+                    <a href="/home">Members</a>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
 <!--================Active Memebers Area =================-->
 <section class="actives_members">
     <div class="container">
@@ -9,7 +19,7 @@
             <h3>Active Members</h3>
             <img src="img/w-title-b.png" alt="">
         </div>
-        <div class="row">
+        <div class="row member-flex">
             @if($activeUsers->isNotEmpty())
                 @foreach($activeUsers as $user)
                     <div class="col-sm-2 col-xs-6">
@@ -90,7 +100,7 @@
             <h3>All Members</h3>
             <img src="img/w-title-b.png" alt="">
         </div>
-        <div class="row">
+        <div class="row member-flex">
             @if($allUsers->isNotEmpty())
                 @foreach($allUsers as $user)
                     <div class="col-sm-2 col-xs-6">
@@ -112,5 +122,4 @@
 </section>
 <!--================End All Members Area =================-->
 
-</div>
 @endsection
