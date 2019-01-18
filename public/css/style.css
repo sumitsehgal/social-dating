@@ -1223,7 +1223,15 @@ body, p, h1, h2, h3, h4, h5, h6 {
   background: transparent;
   line-height: 2;
 }
-
+.header_menu_area .navbar-default .navbar-collapse .navbar-nav.navbar-right li a.logout-button {
+    line-height: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+.header_menu_area .navbar-default .navbar-collapse .navbar-nav.navbar-right li a.logout-button:before {
+    display: none;
+}
 .login_btn:focus {
   outline: none !important;
   box-shadow: none !important;
