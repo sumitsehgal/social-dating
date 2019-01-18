@@ -1221,6 +1221,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
   box-shadow: none !important;
   border: none;
   background: transparent;
+  line-height: 2;
 }
 
 .login_btn:focus {
