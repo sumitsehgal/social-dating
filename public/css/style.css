@@ -58,7 +58,12 @@ div#errs {
     text-align: center;
     padding: 0 0 10px 0;
 }
-
+.row.member-flex {
+    display: flex;
+    -ms-display: flex;
+    -moz-display: flex;
+    flex-wrap: wrap;
+}
 ul {
   list-style: none;
   margin: 0px;
@@ -5195,9 +5200,9 @@ body, p, h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
-.banner_area.banner_area2 .banner_content {
+/*.banner_area.banner_area2 .banner_content {
   position: relative;
-}
+}*/
 
 .banner_area.banner_area2 .banner_content .advanced_search {
   position: relative;
