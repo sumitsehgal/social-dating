@@ -25,13 +25,28 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $this->middleware('auth');
         $loggedUser = Auth::user();
+        $allUsers = User::whereNotIn('id', [$loggedUser->id])->paginate(12);
+        if ($request->ajax()) 
+        {
+            $view = view('elements.singleuser', compact('allUsers'))->render();
+            return response()->json(['html'=>$view]);
+        }
+
         $users = User::whereNotIn('id', [$loggedUser->id])->get();
-        //dd($users);
-        return view('home', compact('users'));
+        $activeUsers = User::whereNotIn('id', [$loggedUser->id])->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW)->limit(12)->get();
+        return view('home', compact('users', 'activeUsers', 'allUsers'));
+    }
+
+    public function allUsers()
+    {
+        $this->middleware('auth');
+        $loggedUser = Auth::user();
+        $allUsers = User::whereNotIn('id', [$loggedUser->id])->paginate(12);
+        return view('allusers', compact('allUsers'));
     }
 
     public function contact()

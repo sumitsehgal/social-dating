@@ -26,6 +26,7 @@ Route::get('/signup', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/allusers', 'HomeController@allUsers');
 Route::get('/memberships', 'HomeController@memberships')->name('memberships');
 Route::get('/membership/upgrade/{plan}', 'MembershipController@upgrade');
 Route::post('/membership/upgrade/{plan}', 'MembershipController@postUpgrade');
