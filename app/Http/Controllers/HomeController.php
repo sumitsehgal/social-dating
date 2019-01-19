@@ -67,13 +67,15 @@ class HomeController extends Controller
         $users = User::paginate();
         $loggedUser = Auth::user();
         $userId = isset($loggedUser->id) ? $loggedUser->id : null;
+        $currentAt =  \Carbon\Carbon::now()->subMinutes(User::ONLINE_TIME_WINDOW);
+
         $onlineMale = User::where('gender', User::MALE_GENDER)
-                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW);
+                            ->where('lastActivity', '>=', $currentAt);
         if($loggedUser)
             $onlineMale->whereNotIn('id', [$userId]);
         $onlineMale = $onlineMale->count();
         $onlineFemale = User::where('gender', User::FEMALE_GENDER)
-                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW);
+                            ->where('lastActivity', '>=', $currentAt);
         if($loggedUser)
             $onlineFemale->whereNotIn('id', [$userId]);
         $onlineFemale = $onlineFemale->count();
