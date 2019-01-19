@@ -9,7 +9,7 @@
             <h3>All Members</h3>
             <img src="img/w-title-b.png" alt="">
         </div>
-        <div class="row">
+        <div class="row member-flex">
             @if($allUsers->isNotEmpty())
                 @foreach($allUsers as $user)
                     <div class="col-sm-2 col-xs-6">
