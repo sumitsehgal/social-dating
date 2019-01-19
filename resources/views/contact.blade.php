@@ -23,24 +23,24 @@
                         <div class="address_item">
                             <img src="img/soul-icon/address-1.png" alt="">
                             <h3>Address</h3>
-                            <!-- <h4>44 Oak Meadow Street </h4>
-                            <h4>Port Washington, NY 11050</h4> -->
+                            <h4>France</h4>
+                            <h4>UK</h4>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="address_item">
                             <img src="img/soul-icon/address-2.png" alt="">
                             <h3>Phone</h3>
-                            <!-- <h4>+880 167 6790690</h4>
-                            <h4>+1800 7804063</h4> -->
+                            <h4>7777777777</h4>
+                            <h4>7777777777</h4>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="address_item">
                             <img src="img/soul-icon/address-3.png" alt="">
                             <h3>Email</h3>
-                            <!-- <h4>rockybd1995@gmail.com</h4>
-                            <h4>support@Verodate.com</h4> -->
+                            <h4>shushantweb@gmail.com</h4>
+                            <h4>support@brownsuagrmale.com</h4>
                         </div>
                     </div>
                 </div>
