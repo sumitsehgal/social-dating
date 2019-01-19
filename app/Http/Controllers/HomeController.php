@@ -65,12 +65,19 @@ class HomeController extends Controller
     {
         $plans = Plan::all();
         $users = User::paginate();
+        $loggedUser = Auth::user();
+        $userId = isset($loggedUser->id) ? $loggedUser->id : null;
         $onlineMale = User::where('gender', User::MALE_GENDER)
-                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW)
-                            ->count();
+                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW);
+        if($loggedUser)
+            $onlineMale->whereNotIn('id', [$userId]);
+        $onlineMale = $onlineMale->count();
         $onlineFemale = User::where('gender', User::FEMALE_GENDER)
-                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW)
-                            ->count();
+                            ->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW);
+        if($loggedUser)
+            $onlineFemale->whereNotIn('id', [$userId]);
+        $onlineFemale = $onlineFemale->count();
+    
         return view('welcome', compact('plans', 'users', 'onlineMale', 'onlineFemale'));
     }
 
