@@ -8,7 +8,6 @@
                 <div class="banner_content">
                     <h3 title="About us"><img class="left_img" src="img/banner/t-left-img.png" alt="">About us<img class="right_img" src="img/banner/t-right-img.png" alt=""></h3>
                     <a href="/">Home</a>
-                    <a href="/">Pages</a>
                     <a href="/about-us">About us</a>
                 </div>
             </div>
@@ -25,9 +24,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="who_we_left">
-                            <h4>We Are VeroDate & We Care About Your Happiness</h4>
-                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the mas-ter-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
-                            <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it.</p>
+                            <h4>We Are Brown Sugar Male & We Care About Your Happiness</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -39,7 +42,37 @@
             </div>
         </section>
         <!--================End who we are Area =================-->
-        
+        <section class="find_soul_area">
+            <div class="container">
+                <div class="welcome_title">
+                    <h3>Why People Choose us</h3>
+                    <img src="img/w-title-b.png" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="find_soul_item">
+                            <img src="img/soul-icon/soul-4.png" alt="">
+                            <h4>Worthy Candidates</h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="find_soul_item">
+                            <img src="img/soul-icon/soul-5.png" alt="">
+                            <h4>Absolute Security</h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="find_soul_item">
+                            <img src="img/soul-icon/soul-6.png" alt="">
+                            <h4>Calling</h4>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--================Best Mate Area =================-->
         <section class="best_mate_area">
             <div class="best_bg_slider">

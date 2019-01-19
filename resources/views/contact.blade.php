@@ -23,24 +23,27 @@
                         <div class="address_item">
                             <img src="img/soul-icon/address-1.png" alt="">
                             <h3>Address</h3>
+                            <h4>Makily Duchaine</h4>
+                            <h4>15 voie de la grange des prés 60260 Lamorlaye</h4>
                             <h4>France</h4>
-                            <h4>UK</h4>
                         </div>
                     </div>
+
+
+
+
                     <div class="col-sm-4">
                         <div class="address_item">
                             <img src="img/soul-icon/address-2.png" alt="">
                             <h3>Phone</h3>
-                            <h4>7777777777</h4>
-                            <h4>7777777777</h4>
+                            <h4>+(33) 0628912394</h4>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="address_item">
                             <img src="img/soul-icon/address-3.png" alt="">
                             <h3>Email</h3>
-                            <h4>shushantweb@gmail.com</h4>
-                            <h4>support@brownsuagrmale.com</h4>
+                            <h4>neelfact1@hotmail.fr</h4>
                         </div>
                     </div>
                 </div>
