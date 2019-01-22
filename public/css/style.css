@@ -64,6 +64,18 @@ div#errs {
     -moz-display: flex;
     flex-wrap: wrap;
 }
+.actives_members .row.member-flex h3 {
+    text-align: center;
+    display: block;
+    max-width: 230px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #fff;
+    background: #a25242;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    padding: 12px;
+}
 ul {
   list-style: none;
   margin: 0px;
@@ -1233,6 +1245,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     display: inline-block;
     padding: 10px;
+    color: red;
 }
 .header_menu_area .navbar-default .navbar-collapse .navbar-nav.navbar-right li a.logout-button:before {
     display: none;
