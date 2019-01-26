@@ -142,4 +142,25 @@ class UserController extends Controller
         
     }
 
+
+    public function listings(Request $request)
+    {
+        $loggedUser = Auth::user();
+        $allUsers = User::whereNotIn('id', [$loggedUser->id])->paginate(12);
+        
+        if($allUsers->hasMorePages())
+            $nextPage = !empty($request['page']) ? $request['page']+1 : 2;
+        else
+            $nextPage = false;
+
+        $view = \View::make('elements.singleuser', compact('allUsers'));
+
+        $contents = $view->render();
+
+        return response()->json([
+            'html' => $contents,
+            'pageno' => $nextPage
+        ]);
+    }
+
 }

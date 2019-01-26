@@ -252,5 +252,35 @@ $(document).ready(function()
 		});
 	}
 
+	if($('.view-more').length > 0)
+	{
+		$('.view-more').on('click', function()
+		{
+			var pageNo = $(this).attr('pageno');
+
+			$.ajax({
+
+				url: '/listusers?page='+pageNo,
+				dataType: 'json',
+				success: function(response)
+				{
+					$('.view-list').append(response.html);
+					if(response.pageno)
+					{
+						console.log(response.pageno);
+						$('.view-more').attr('pageno', response.pageno);
+					}
+					else
+					{
+						$('.view-more').remove();
+					}
+				}
+
+			});
+
+			return false;
+		});
+	}
+
 
 });

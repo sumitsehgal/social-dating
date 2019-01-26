@@ -161,7 +161,7 @@
             <h3>All Members</h3>
             <img src="img/w-title-b.png" alt="">
         </div>
-        <div class="row member-flex">
+        <div class="row member-flex view-list">
             @if($allUsers->isNotEmpty())
                 @foreach($allUsers as $user)
                     <div class="col-sm-2 col-xs-6">
@@ -180,7 +180,7 @@
                 @endforeach
             @endif
         </div>
-        <a href="/allusers?page=2" class="register_angkar_btn view-more">View More</a>
+        <a href="/allusers?page=2"  pageno="2"  class="register_angkar_btn view-more">View More</a>
     </div>
 </section>
 <!--================End All Members Area =================-->

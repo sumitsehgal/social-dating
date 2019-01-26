@@ -116,7 +116,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="datepicker">
-                                    <input type='text' class="form-control datetimepicker4" placeholder="Birthday" name="dob" />
+                                    <input type='text' class="form-control datetimepicker4 datetime" placeholder="Birthday" name="dob" />
                                     <span class="add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                 </div>
                             </div>

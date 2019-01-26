@@ -44,3 +44,4 @@ Route::get('/addfriend/{id}', 'UserController@addFriend');
 Route::get('/cancelfriend/{id}', 'UserController@removeFriend');
 Route::get('/approvefriend/{id}', 'UserController@acceptFriend');
 Route::get('/declinefriend/{id}', 'UserController@declineFriend');
+Route::get('/listusers', 'UserController@listings');
