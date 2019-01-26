@@ -28,9 +28,11 @@
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-       
-        <script src="{{ asset('js/map-custome.js') }}"></script> -->
+        @yield('headerCss')
+
+        <style type="text/css">
+        div#ui-datepicker-div {z-index: 16 !important;}
+        </style>
 
 
     </head>
@@ -187,6 +189,12 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="profile-button" class="dropdown-item" href="/user/{{Auth::user()->id}}"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        {{ __('Profile') }}
+                                    </a>
+                                </div>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="logout-button" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -268,6 +276,7 @@
         
 
         <script src="{{ asset('js/jquery-2.1.4.min.js') }}"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('vendors/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
         <script src="{{ asset('vendors/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>

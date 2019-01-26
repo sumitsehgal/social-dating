@@ -26,7 +26,7 @@ class MembershipController extends Controller
     {
         $plan = Plan::where('stripe_plan_id',$planId)->first();
         // TODO Validation Pending
-        \Stripe\Stripe::setApiKey("pk_test_NnuiwSp0c3X7JGfPhmF1yMeV");
+        \Stripe\Stripe::setApiKey(config("services.stripe.key"));
         try
         {
             $response = \Stripe\Token::create(array(
