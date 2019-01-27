@@ -44,6 +44,10 @@ Table of Content:
 .col-md-offset-right-1 {
   margin-right: 8.33333333%;
 }
+div#ui-datepicker-div
+{
+  z-index: 99 !important;
+}
 .login_btn_area a.btn.btn-link.forgot {
     color: #e74c3c;
 }

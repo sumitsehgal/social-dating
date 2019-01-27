@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="icon" href="{{ asset('img/fav-icon.png" type="image/x-icon') }}" />
+        <link rel="icon" href="/images/fav-icon.png" type="image/x-icon" />
         <title>Brown Sugar Male - Dating Social Network Website</title>
         <link href="{{ asset('vendors/material-icon/css/materialdesignicons.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
@@ -29,12 +29,9 @@
         <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
         @yield('headerCss')
-
         <style type="text/css">
         div#ui-datepicker-div {z-index: 999 !important;}
         </style>
-
-
     </head>
     <body>
        
@@ -188,13 +185,16 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="profile-button" class="dropdown-item" href="/user/{{Auth::user()->id}}"><i class="fa fa-sign-out" aria-hidden="true"></i>
                                         {{ __('Profile') }}
                                     </a>
-                                </div>
+                                </div> -->
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="profile-button logout-button" class="dropdown-item" href="/user/{{Auth::user()->id}}"><i class="fa fa-user-o" aria-hidden="true"></i>
+                                        {{ __('Profile') }}
+                                    </a>
                                     <a class="logout-button" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
