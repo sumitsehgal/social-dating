@@ -84,12 +84,7 @@ $(document).ready(function()
 		datePicker.datepicker();
 	}
 
-
-
-	if($('.add-friend').length > 0)
-	{
-
-		$('.add-friend').on('click', function()
+		$('body').on('click', '.add-friend' ,function()
 		{
 			var friendId = $('.add-friend').attr('userid');
 			var btn = $(this);
@@ -112,6 +107,8 @@ $(document).ready(function()
 						if(response.status)
 						{
 							btn.html('Cancel Request');
+							btn.addClass('cancel-friend');
+							btn.removeClass('add-friend');
 						}
 						else
 						{
@@ -122,13 +119,9 @@ $(document).ready(function()
 				})
 			}
 		});
-	}
 
 
-	if($('.cancel-friend').length > 0)
-	{
-
-		$('.cancel-friend').on('click', function()
+		$('body').on('click', '.cancel-friend', function()
 		{
 			var friendId = $('.cancel-friend').attr('userid');
 			var btn = $(this);
@@ -151,6 +144,8 @@ $(document).ready(function()
 						if(response.status)
 						{
 							btn.html('Add Friend');
+							btn.addClass('add-friend');
+							btn.removeClass('cancel-friend');
 						}
 						else
 						{
@@ -161,7 +156,6 @@ $(document).ready(function()
 				})
 			}
 		});
-	}
 
 
 	if($('.approve-request').length > 0)

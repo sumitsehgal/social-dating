@@ -30,7 +30,10 @@ class Contacts extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.contacts')
+        return $this->to('shanugoyal96@gmail.com')
+                    ->from($this->data['email'])
+                    ->cc('theprofessional1992@gmail.com')
+                    ->view('emails.contacts')
                     ->with([
                         'data' => $this->data,
                     ]);

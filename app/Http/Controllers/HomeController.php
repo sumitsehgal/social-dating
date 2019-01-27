@@ -62,7 +62,7 @@ class HomeController extends Controller
 
     public function postContact(Request $request)
     {
-        $mail = Mail::to(config('mail.brownsugarmail'))->send(new Contacts($request));
+        $mail = Mail::to('theprofessional1992@gmail.com')->send(new Contacts($request));
         // if(!$mail)
         // {
         //     Session::flash('message', 'There is some internal Problem. Please try again.'); 
