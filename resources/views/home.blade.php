@@ -59,8 +59,8 @@
                             </ul>
                             <h4>{{$user->name}}</h4>
                             <h5>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}}  @endif years old</h5>
-                            <a href="javascript:void(0);" class="approve-request" userid="{{$user->id}}">Approve</a>
-                            <a href="javascript:void(0);" class="decline-request" userid="{{$user->id}}">Decline</a>
+                            <a href="javascript:void(0);" class="approve-request" userid="{{$user->id}}"><i class="fa fa-check" aria-hidden="true"></i> <span>Approve</span></a>
+                            <a href="javascript:void(0);" class="decline-request" userid="{{$user->id}}"><i class="fa fa-times" aria-hidden="true"></i> <span>Decline</span></a>
                         </div>
                     </div>
                 @endforeach
