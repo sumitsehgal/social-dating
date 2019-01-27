@@ -49,7 +49,7 @@ class User extends Authenticatable implements HasMedia //implements MustVerifyEm
     {
         if(array_key_exists('dob', $data) && !empty($data['dob']))
         {
-            $data['dob'] = Carbon::parse($data['dob']);
+            $data['dob'] = Carbon::parse($data['dob'])->format('Y-m-d');
         }
         return $data;
     }

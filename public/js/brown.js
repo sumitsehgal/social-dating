@@ -9,7 +9,7 @@ $(document).ready(function()
 		}
 	});
 
-	$('#home-registration #reg_email2').on('change', function()
+	$('#home-registration #reg_email2, #reg_email').on('change', function()
 	{
 			var email = $(this).val();
 			var ibox = $(this);
@@ -279,6 +279,23 @@ $(document).ready(function()
 			});
 
 			return false;
+		});
+	}
+	
+
+
+	if($('.frm-register').length > 0)
+	{
+		$('.frm-register').on('submit', function()
+		{
+			var password = $(this).find('.password').first().val();
+			var cPassword = $(this).find('.confirm-password').first().val();
+
+			if(password != cPassword)
+			{
+				alert("Password Mismatch");
+				return false;
+			}
 		});
 	}
 

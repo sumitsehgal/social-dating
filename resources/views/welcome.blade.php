@@ -27,7 +27,7 @@
                             @if(!Auth::check())
                             <div class="registration_form_s">
                                 <h4>Registration</h4>
-                                <form  method="POST" action="{{ route('register') }}" id="home-registration">
+                                <form  method="POST" action="{{ route('register') }}" id="home-registration" class="frm-register">
                                     @csrf
                                     <div class="form-group">
                                         <input type="email" class="form-control" id="reg_email2" placeholder="Email" name="email" value="{{ old('email') }}" required >
@@ -39,10 +39,10 @@
                                         <input type="text" class="form-control" id="reg_user2" placeholder="Username">
                                     </div> -->
                                     <div class="form-group">
-                                        <input type="password" class="form-control" id="reg_pass2" placeholder="Password"  name="password" required>
+                                        <input type="password" class="form-control password" id="reg_pass2" placeholder="Password"  name="password" required>
                                     </div>
                                     <div class="form-group">
-                                        <input id="password-confirm" type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" required>
+                                        <input id="password-confirm" type="password" class="form-control confirm-password" placeholder="Confirm Password" name="password_confirmation" required>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -65,7 +65,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <div class="datepicker">
-                                                    <input type='text' class="form-control datetimepicker4 datetime" placeholder="Birthday"  name="dob"/>
+                                                    <input type='text' class="form-control datetimepicker4 datetime" placeholder="Birthday"  name="dob" required autocomplete="off"/>
                                                     <span class="add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                                 </div>
                                             </div>

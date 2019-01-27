@@ -71,6 +71,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'gender' => $data['gender'],
         ]);
+        $data = $user->my_validate($data);
+        unset($data['password']);
+        $user->fill($data);
+        $user->save();
 
         $profile = new Profile();
         $user->profile()->save($profile);
