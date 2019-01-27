@@ -732,8 +732,8 @@
     /*  Date Picker js
     /*----------------------------------------------------*/
     $(document).ready(function(){
-        if($(".form_datetime").length > 0)
-            $(".form_datetime").datetimepicker({format: 'dd-mm-yyyy hh:ii'});
+        if($(".form_datetime").length > 0){}
+           // $(".form_datetime").datetimepicker({format: 'dd-mm-yyyy hh:ii'});
     })
     
     /*----------------------------------------------------*/
@@ -752,7 +752,7 @@
     /*----------------------------------------------------*/
     /*Date Time Picker*/
     /*----------------------------------------------------*/
-    $('.datetimepicker4').datetimepicker();
+    //$('.datetimepicker4').datetimepicker();
     
     /*----------------------------------------------------*/
     /*Price select custome handle*/

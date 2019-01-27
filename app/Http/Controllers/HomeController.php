@@ -37,8 +37,11 @@ class HomeController extends Controller
         }
 
         $users = User::whereNotIn('id', [$loggedUser->id])->get();
-        $activeUsers = User::whereNotIn('id', [$loggedUser->id])->where('lastActivity', '>=', User::ONLINE_TIME_WINDOW)->limit(12)->get();
-        return view('home', compact('users', 'activeUsers', 'allUsers'));
+        $currentAt =  \Carbon\Carbon::now()->subMinutes(User::ONLINE_TIME_WINDOW);
+        $activeUsers = User::whereNotIn('id', [$loggedUser->id])->where('lastActivity', '>=', $currentAt)->limit(12)->get();
+        $pendingRequests = $loggedUser->getFriendRequests();
+
+        return view('home', compact('users', 'activeUsers', 'allUsers', 'pendingRequests'));
     }
 
     public function allUsers()

@@ -28,6 +28,9 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/allusers', 'HomeController@allUsers');
 Route::get('/memberships', 'HomeController@memberships')->name('memberships');
+Route::get('/user/{id}', 'UserController@userDetails');
+Route::get('/profile', 'UserController@profile');
+Route::post('/profile-post', 'UserController@postProfile');
 Route::get('/membership/upgrade/{plan}', 'MembershipController@upgrade');
 Route::post('/membership/upgrade/{plan}', 'MembershipController@postUpgrade');
 
@@ -36,3 +39,9 @@ Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social'
 Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 Route::post('/checkemail', 'UserController@checkEmail');
+
+Route::get('/addfriend/{id}', 'UserController@addFriend');
+Route::get('/cancelfriend/{id}', 'UserController@removeFriend');
+Route::get('/approvefriend/{id}', 'UserController@acceptFriend');
+Route::get('/declinefriend/{id}', 'UserController@declineFriend');
+Route::get('/listusers', 'UserController@listings');
