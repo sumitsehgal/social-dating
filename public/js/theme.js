@@ -741,10 +741,10 @@
     /*----------------------------------------------------*/
     function counterup(){
         if ( $('.counter').length ){
-            $('.counter').counterUp({
-                delay: 20,
-                time: 1000
-            });
+            // $('.counter').counterUp({
+            //     delay: 20,
+            //     time: 1000
+            // });
         }
     }
     counterup();

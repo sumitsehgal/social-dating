@@ -29,8 +29,9 @@
         <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
         @yield('headerCss')
-
-
+        <style type="text/css">
+        div#ui-datepicker-div {z-index: 999 !important;}
+        </style>
     </head>
     <body>
        
@@ -78,7 +79,7 @@
                 <div class="col-md-6">
                     <div class="registration_form_s">
                         <h4>Registration</h4>
-                        <form  method="POST" action="{{ route('register') }}">
+                        <form  method="POST" action="{{ route('register') }}" class="frm-register">
                             @csrf
                             <div class="form-group">
                                 <input type="email" class="form-control" id="reg_email" placeholder="Email" name="email" required>
@@ -90,10 +91,10 @@
                                 <input type="text" class="form-control" id="reg_user" placeholder="Username">
                             </div> -->
                             <div class="form-group">
-                                <input type="password" class="form-control" id="reg_pass" placeholder="Password" name="password" required>
+                                <input type="password" class="form-control password" id="reg_pass" placeholder="Password" name="password" required>
                             </div>
                             <div class="form-group">
-                                <input id="password-confirm" type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" required>
+                                <input id="password-confirm1" type="password" class="form-control confirm-password" placeholder="Confirm Password" name="password_confirmation" required>
                             </div>
                             <div class="form-group">
                                 <!-- <div class="btn-group">
@@ -112,7 +113,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="datepicker">
-                                    <input type='text' class="form-control datetimepicker4 datetime" placeholder="Birthday" name="dob" />
+                                    <input type='text' class="form-control datetimepicker4 datetime" placeholder="Birthday" name="dob" required autocomplete="off"/>
                                     <span class="add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                 </div>
                             </div>
@@ -132,10 +133,10 @@
         </div>
         <div class="login_form_inner zoom-anim-dialog mfp-hide" id="forgot-dialog">
            <h4>Forgot Password</h4>
-           <form method="POST" action="{{ route('login') }}" id="lgn-frm">
+           <form method="POST" action="{{ route('login') }}" id="lgn-frm1">
                 @csrf
                 <div id="errs"></div>
-               <input type="email"  placeholder="Email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required id='lg-email'>
+               <input type="email"  placeholder="Email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required id='lg-email1'>
                @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
