@@ -24,8 +24,7 @@
                             <img src="img/soul-icon/address-1.png" alt="">
                             <h3>Address</h3>
                             <h4>Makily Duchaine</h4>
-                            <h4>15 voie de la grange des prés 60260 Lamorlaye</h4>
-                            <h4>France</h4>
+                            <h4>15 voie de la grange des prés<br> 60260 Lamorlaye, France</h4>
                         </div>
                     </div>
 

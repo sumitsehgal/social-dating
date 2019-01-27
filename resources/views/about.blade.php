@@ -49,27 +49,27 @@
                     <img src="img/w-title-b.png" alt="">
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="find_soul_item">
                             <img src="img/soul-icon/soul-4.png" alt="">
                             <h4>Worthy Candidates</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="find_soul_item">
                             <img src="img/soul-icon/soul-5.png" alt="">
                             <h4>Absolute Security</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="find_soul_item">
                             <img src="img/soul-icon/soul-6.png" alt="">
                             <h4>Calling</h4>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -114,15 +114,15 @@
                 <div class="row team_inner_area">
                     <div class="col-md-3 col-sm-6">
                         <div class="team_items">
-                            <img src="img/members/our-team/our-team-1.jpg" alt="">
+                            <img src="images/owner1.jpg" alt="Neel">
                             <a class="plus_zoom" href="#"></a>
                             <div class="hover_details">
-                                <h4>Maria Watson</h4>
-                                <h5>Ceo- co Founder</h5>
+                                <h4>Neel Duchaine</h4>
+                                <h5>Founder</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <!-- <div class="col-md-3 col-sm-6">
                         <div class="team_items">
                             <img src="img/members/our-team/our-team-2.jpg" alt="">
                             <a class="plus_zoom" href="#"></a>
@@ -151,7 +151,7 @@
                                 <h5>Ceo- co Founder</h5>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
