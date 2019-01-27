@@ -17,6 +17,7 @@
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::post('/contact', 'HomeController@postContact');
 Route::get('/about-us', 'HomeController@about')->name('about');
 
 Route::get('/signup', function () {

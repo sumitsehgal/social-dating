@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Plan;
 use Carbon\Carbon;  
+use App\Mail\Contacts;
+use Illuminate\Support\Facades\Mail;
+use Session;
 
 class HomeController extends Controller
 {
@@ -55,6 +58,20 @@ class HomeController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+
+    public function postContact(Request $request)
+    {
+        $mail = Mail::to(config('mail.brownsugarmail'))->send(new Contacts($request));
+        // if(!$mail)
+        // {
+        //     Session::flash('message', 'There is some internal Problem. Please try again.'); 
+        //     Session::flash('alert-class', 'alert-danger');
+        //     return view('contact');    
+        // }
+        Session::flash('message', 'Thank you for Contacting. We will contact you soon.'); 
+        Session::flash('alert-class', 'alert-success');
+        return view('contact'); 
     }
 
     public function memberships()
