@@ -30,10 +30,6 @@
 
         @yield('headerCss')
 
-        <style type="text/css">
-        div#ui-datepicker-div {z-index: 16 !important;}
-        </style>
-
 
     </head>
     <body>
