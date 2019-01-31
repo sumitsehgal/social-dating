@@ -29,7 +29,9 @@ class UserController extends Controller
     public function userDetails(Request $request, $id)
     {
         $user = User::find($id);
-        $currentUser = User::find(Auth::user()->id);
+        $currentUser = null;
+        if(Auth::user())
+            $currentUser = User::find(Auth::user()->id);
         return view('users.details', compact('user', 'currentUser'));
     }
 
@@ -46,7 +48,7 @@ class UserController extends Controller
         $user->fill($data);
         $user->save();
         //$user->addMediaFromRequest('avatar')->toMediaCollection('avatars');
-        if(!empty($request->get('file')))
+        if(!empty($request->file('file')))
             $user->addMediaFromRequest('file')->toMediaCollection('avatars');
 
         if(empty($user->profile))

@@ -306,13 +306,15 @@
                         @foreach($users as $user)
                             <div class="item">
                                 <a href="/user/{{$user->id}}">
-                                    @if($user->gender == 'Male')
+                                    @if($user->getMedia('avatars')->isNotEmpty())
+                                        <img src="{{$user->getMedia('avatars')->last()->getUrl()}}" height="172" width="172" />
+                                    @elseif($user->gender == 'Male')
                                         <img src="{{ asset('male_dp.jpeg') }}" alt="">
                                     @else
                                         <img src="{{ asset('female_dp.jpeg') }}" alt="">
                                     @endif
                                     <h4>{{$user->name}}</h4>
-                                    <h5>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}}  @endif years old</h5>
+                                    <h5>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}} years old @endif &nbsp;</h5>
                                 </a>
                             </div>
                         @endforeach

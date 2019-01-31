@@ -84,7 +84,7 @@ class HomeController extends Controller
     public function welcome()
     {
         $plans = Plan::all();
-        $users = User::paginate();
+        $users = User::orderBy('id','DESC')->paginate();
         $loggedUser = Auth::user();
         $userId = isset($loggedUser->id) ? $loggedUser->id : null;
         $currentAt =  \Carbon\Carbon::now()->subMinutes(User::ONLINE_TIME_WINDOW);

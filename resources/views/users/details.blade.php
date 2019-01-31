@@ -15,7 +15,9 @@
         <div class="container">
             <div class="profile_content">
                 <div class="user_img">
-                    @if($user->gender == 'Male')
+                    @if($user->getMedia('avatars')->isNotEmpty())
+                        <img class="img-circle" src="{{$user->getMedia('avatars')->last()->getUrl()}}" height="172" width="172" />
+                    @elseif($user->gender == 'Male')
                         <img class="img-circle" src="{{ asset('male_dp.jpeg') }}" alt="">
                     @else
                         <img class="img-circle" src="{{ asset('female_dp.jpeg') }}" alt="">
@@ -23,9 +25,9 @@
                 </div>
                 <div class="user_name">
                     <h3>{{$user->name}}</h3>
-                    <h4>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}}  @endif years old</h4>
+                    <h4>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}} years old  @endif &nbsp; </h4>
                     <ul>
-                        <li><a href="#">Frace, Paris</a></li>
+                        <!-- <li><a href="#">Frace, Paris</a></li> -->
                         <li class="dropdown extara">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">80% Match</a>
                             <ul class="dropdown-menu">
@@ -58,20 +60,23 @@
                                       </ul>
                                     </li>
                                 </ul> -->
-                            @if($currentUser->id != $user->id)
-
-                                @if($currentUser->hasSentFriendRequestTo($user))
-                                    <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn cancel-friend" userid="{{$user->id}}" >Cancel Request <img src="img/user.png" alt=""></a>
-                                @elseif($currentUser->isFriendWith($user))
-                                    <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn " userid="{{$user->id}}" >Friend <img src="img/user.png" alt=""></a>
-                                @elseif($currentUser->hasFriendRequestFrom($user))
-                                    <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn approve-request" userid="{{$user->id}}" >Confirm <img src="img/user.png" alt=""></a>
+                            @if(!empty($currentUser))
+                                @if($currentUser->id != $user->id)
+                                    @if($currentUser->hasSentFriendRequestTo($user))
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn cancel-friend" userid="{{$user->id}}" >Cancel Request <img src="img/user.png" alt=""></a>
+                                    @elseif($currentUser->isFriendWith($user))
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn " userid="{{$user->id}}" >Friend <img src="img/user.png" alt=""></a>
+                                    @elseif($currentUser->hasFriendRequestFrom($user))
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn approve-request" userid="{{$user->id}}" >Confirm <img src="img/user.png" alt=""></a>
+                                    @else
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn add-friend" userid="{{$user->id}}" >Add Friend <img src="img/user.png" alt=""></a>
+                                    @endif
+                                    <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn">Chat Now <img src="img/comment.png" alt=""></a>
                                 @else
-                                    <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn add-friend" userid="{{$user->id}}" >Add Friend <img src="img/user.png" alt=""></a>
+                                <a href="/profile" class="btn form-control login_btn "  >Edit Profile <img src="img/user.png" alt=""></a>
                                 @endif
-                                <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn">Chat Now <img src="img/comment.png" alt=""></a>
                             @else
-                            <a href="/profile" class="btn form-control login_btn "  >Edit Profile <img src="img/user.png" alt=""></a>
+                                <a href="javascript:void(0);" onclick="alert('Please Login'); return;" value="LogIn" class="btn form-control login_btn" userid="{{$user->id}}" >Add Friend <img src="img/user.png" alt=""></a>
                             @endif
                             </div>
                         </div>
@@ -109,7 +114,7 @@
                                             </ul>
                                             <ul>
                                                 <li><a href="#">{{$user->gender}}&nbsp;</a></li>
-                                                <li><a href="#">@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}}  @endif years old&nbsp;</a></li>
+                                                <li><a href="#">@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}} years old @endif &nbsp;</a></li>
                                                 <li><a href="#">{{@$user->profile->country}}&nbsp;</a></li>
                                                 <li><a href="#">{{@$user->profile->city}}&nbsp;</a></li>
                                                 <li><a href="#">@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->format('d F Y')}}  @endif&nbsp;</a></li>
@@ -124,8 +129,8 @@
                                                 <li><a href="#">Smoking</a></li>
                                                 <li><a href="#">Eye Color</a></li>
                                                 <li><a href="#">Drinking</a></li>
-                                                <li><a href="#">&nbsp;</a></li>
-                                                <li><a href="#">&nbsp;</a></li>
+                                                <li><a href="#">Height</a></li>
+                                                <li><a href="#">Weight</a></li>
                                             </ul>
                                             <ul>
                                                 <li><a href="#">{{@$user->profile->education}}&nbsp;</a></li>
@@ -134,8 +139,8 @@
                                                 <li><a href="#">{{@$user->profile->smoking}}&nbsp;</a></li>
                                                 <li><a href="#">{{@$user->profile->eye_color}}&nbsp;</a></li>
                                                 <li><a href="#">{{@$user->profile->drinking}}</a></li>
-                                                <li><a href="#">&nbsp;</a></li>
-                                                <li><a href="#">&nbsp;</a></li>
+                                                <li><a href="#">{{@$user->profile->height}}&nbsp;</a></li>
+                                                <li><a href="#">{{@$user->profile->weight}}</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -148,13 +153,15 @@
                                                 <div class="col-sm-2 col-xs-6">
                                                     <div class="all_members_item">
                                                     <a href="/user/{{$friend->id}}">
-                                                        @if($friend->gender == 'Male')
+                                                        @if($friend->getMedia('avatars')->isNotEmpty())
+                                                            <img src="{{$friend->getMedia('avatars')->last()->getUrl()}}" height="172" width="172" />
+                                                        @elseif($friend->gender == 'Male')
                                                             <img src="{{ asset('male_dp.jpeg') }}" alt="">
                                                         @else
                                                             <img src="{{ asset('female_dp.jpeg') }}" alt="">
                                                         @endif
                                                         <h4>{{$friend->name}}</h4>
-                                                        <h5>@if($friend->dob && !empty($friend->dob)) {{ Carbon\Carbon::parse($friend->dob)->age}}  @endif years old</h5>
+                                                        <h5>@if($friend->dob && !empty($friend->dob)) {{ Carbon\Carbon::parse($friend->dob)->age}}  years old @endif &nbsp;</h5>
                                                     </a>
                                                     </div>
                                                 </div>
@@ -168,90 +175,12 @@
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="group">
                                         <div class="profile_list">
-                                            <ul>
-                                                <li><a href="#">Gender</a></li>
-                                                <li><a href="#">Age</a></li>
-                                                <li><a href="#">Country</a></li>
-                                                <li><a href="#">City</a></li>
-                                                <li><a href="#">Birthday</a></li>
-                                                <li><a href="#">Relationship</a></li>
-                                                <li><a href="#">Looking for a</a></li>
-                                                <li><a href="#">Work as</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a href="#">Female</a></li>
-                                                <li><a href="#">26 years old</a></li>
-                                                <li><a href="#">France</a></li>
-                                                <li><a href="#">Paris</a></li>
-                                                <li><a href="#">16 December 1990</a></li>
-                                                <li><a href="#">Single</a></li>
-                                                <li><a href="#">Man</a></li>
-                                                <li><a href="#">Designer</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a href="#">Education</a></li>
-                                                <li><a href="#">Know</a></li>
-                                                <li><a href="#">Interests</a></li>
-                                                <li><a href="#">Smoking</a></li>
-                                                <li><a href="#">Eye Color</a></li>
-                                                <li><a href="#">Marital Status</a></li>
-                                                <li><a href="#">Looking for a</a></li>
-                                                <li><a href="#">Work as</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a href="#">Graduate Degree</a></li>
-                                                <li><a href="#">French, Russian</a></li>
-                                                <li><a href="#">Billiards</a></li>
-                                                <li><a href="#">No</a></li>
-                                                <li><a href="#">Brown</a></li>
-                                                <li><a href="#">Single</a></li>
-                                                <li><a href="#">Man</a></li>
-                                                <li><a href="#">Designer </a></li>
-                                            </ul>
+                                            
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="forums">
                                         <div class="profile_list">
-                                            <ul>
-                                                <li><a href="#">Gender</a></li>
-                                                <li><a href="#">Age</a></li>
-                                                <li><a href="#">Country</a></li>
-                                                <li><a href="#">City</a></li>
-                                                <li><a href="#">Birthday</a></li>
-                                                <li><a href="#">Relationship</a></li>
-                                                <li><a href="#">Looking for a</a></li>
-                                                <li><a href="#">Work as</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a href="#">Female</a></li>
-                                                <li><a href="#">26 years old</a></li>
-                                                <li><a href="#">France</a></li>
-                                                <li><a href="#">Paris</a></li>
-                                                <li><a href="#">16 December 1990</a></li>
-                                                <li><a href="#">Single</a></li>
-                                                <li><a href="#">Man</a></li>
-                                                <li><a href="#">Designer</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a href="#">Education</a></li>
-                                                <li><a href="#">Know</a></li>
-                                                <li><a href="#">Interests</a></li>
-                                                <li><a href="#">Smoking</a></li>
-                                                <li><a href="#">Eye Color</a></li>
-                                                <li><a href="#">Marital Status</a></li>
-                                                <li><a href="#">Looking for a</a></li>
-                                                <li><a href="#">Work as</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a href="#">Graduate Degree</a></li>
-                                                <li><a href="#">French, Russian</a></li>
-                                                <li><a href="#">Billiards</a></li>
-                                                <li><a href="#">No</a></li>
-                                                <li><a href="#">Brown</a></li>
-                                                <li><a href="#">Single</a></li>
-                                                <li><a href="#">Man</a></li>
-                                                <li><a href="#">Designer </a></li>
-                                            </ul>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -274,65 +203,13 @@
                                         <img src="img/widget-title-border.png" alt="">
                                     </div>
                                     <ul>
-                                        <li><a href="#"><img src="/img/photo/photo-1.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-2.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-3.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-4.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-5.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-6.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-7.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-8.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="/img/photo/photo-9.jpg" alt=""></a></li>
+                                    @if($user->getMedia('avatars')->isNotEmpty())
+                                        @foreach($user->getMedia('avatars') as $avatars)
+                                            <li><a href=""><img src="{{$avatars->getUrl()}}" height="75" width=75 /></a></li>
+                                        @endforeach
+                                    @endif
                                     </ul>
                                 </aside>
-                                <!-- <aside class="s_widget recent_post_widget">
-                                    <div class="s_title">
-                                        <h4>Recent Post</h4>
-                                        <img src="img/widget-title-border.png" alt="">
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="img/blog/recent-post/recent-post-1.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Blog Image Post</h4>
-                                            <a href="#">14 Sep, 2016 at 08:00 Pm</a>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="img/blog/recent-post/recent-post-2.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Blog Standard Post</h4>
-                                            <a href="#">14 Sep, 2016 at 08:00 Pm</a>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="img/blog/recent-post/recent-post-3.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Blog Image Post</h4>
-                                            <a href="#">14 Sep, 2016 at 08:00 Pm</a>
-                                        </div>
-                                    </div>
-                                </aside>
-                                <aside class="s_widget social_widget">
-                                    <div class="s_title">
-                                        <h4>Tags</h4>
-                                        <img src="img/widget-title-border.png" alt="">
-                                    </div>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                    </ul>
-                                </aside> -->
                             </div>
                         </div>
                     </div>

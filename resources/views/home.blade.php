@@ -29,7 +29,9 @@
                             <ul class="nav navbar-nav">
                                 <li class="dropdown tool_hover">
                                 <a href="/user/{{$user->id}}" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">
-                                    @if($user->gender == 'Male')
+                                    @if($user->getMedia('avatars')->isNotEmpty())
+                                        <img src="{{$user->getMedia('avatars')->last()->getUrl()}}" />
+                                    @elseif($user->gender == 'Male')
                                         <img src="{{ asset('male_dp.jpeg') }}" alt="" >
                                     @else
                                         <img src="{{ asset('female_dp.jpeg') }}" alt="" >
@@ -43,7 +45,9 @@
                                             </div>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    @if($user->gender == 'Male')
+                                                    @if($user->getMedia('avatars')->isNotEmpty())
+                                                        <img src="{{$user->getMedia('avatars')->last()->getUrl()}}" />
+                                                    @elseif($user->gender == 'Male')
                                                         <img src="{{ asset('male_dp.jpeg') }}" alt="" height="40" width="50">
                                                     @else
                                                         <img src="{{ asset('female_dp.jpeg') }}" alt="" height="40" width="50">
@@ -86,7 +90,9 @@
                             <ul class="nav navbar-nav">
                                 <li class="dropdown tool_hover">
                                 <a href="/user/{{$user->id}}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
-                                    @if($user->gender == 'Male')
+                                    @if($user->getMedia('avatars')->isNotEmpty())
+                                        <img src="{{$user->getMedia('avatars')->last()->getUrl()}}" />
+                                    @elseif($user->gender == 'Male')
                                         <img src="{{ asset('male_dp.jpeg') }}" alt="" >
                                     @else
                                         <img src="{{ asset('female_dp.jpeg') }}" alt="" >
@@ -100,7 +106,9 @@
                                             </div>
                                             <div class="media">
                                                 <div class="media-left">
-                                                    @if($user->gender == 'Male')
+                                                    @if($user->getMedia('avatars')->isNotEmpty())
+                                                        <img src="{{$user->getMedia('avatars')->last()->getUrl()}}" />
+                                                    @elseif($user->gender == 'Male')
                                                         <img src="{{ asset('male_dp.jpeg') }}" alt="" height="40" width="50">
                                                     @else
                                                         <img src="{{ asset('female_dp.jpeg') }}" alt="" height="40" width="50">
@@ -137,7 +145,9 @@
                 @foreach($users as $user)
                     <div class="item">
                     <a href="/user/{{$user->id}}">
-                        @if($user->gender == 'Male')
+                        @if($user->getMedia('avatars')->isNotEmpty())
+                            <img src="{{$user->getMedia('avatars')->last()->getUrl()}}" />
+                        @elseif($user->gender == 'Male')
                             <img src="{{ asset('male_dp.jpeg') }}" alt="">
                         @else
                             <img src="{{ asset('female_dp.jpeg') }}" alt="">
@@ -167,7 +177,9 @@
                     <div class="col-sm-2 col-xs-6">
                         <div class="all_members_item">
                         <a href="/user/{{$user->id}}">
-                            @if($user->gender == 'Male')
+                            @if($user->getMedia('avatars')->isNotEmpty())
+                                <img  src="{{$user->getMedia('avatars')->last()->getUrl()}}" />
+                            @elseif($user->gender == 'Male')
                                 <img src="{{ asset('male_dp.jpeg') }}" alt="">
                             @else
                                 <img src="{{ asset('female_dp.jpeg') }}" alt="">
