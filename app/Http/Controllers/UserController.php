@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Profile;
+use Chat;
+use Musonza\Chat\Models\Conversation;
 
 class UserController extends Controller
 {
@@ -30,9 +32,27 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $currentUser = null;
+        $conversation = null;
+        $unread = 0;
+        $lastMessage = null;
         if(Auth::user())
+        {
             $currentUser = User::find(Auth::user()->id);
-        return view('users.details', compact('user', 'currentUser'));
+            $conversation = Chat::conversations()->between($user, $currentUser);
+            if(empty($conversation))
+            {
+                // Create New One
+                $conversation = Chat::createConversation([$user, $currentUser])->makePrivate();
+            }
+            $unread = Chat::conversation($conversation)->for($currentUser)->unreadCount();
+
+            $messages = Chat::conversation($conversation)->for(auth()->user())->getMessages();
+            $lastMessage = !empty($messages->last()) ? $messages->last()->id : null;
+
+        }
+        
+            
+        return view('users.details', compact('user', 'currentUser', 'conversation', 'unread', 'lastMessage'));
     }
 
     public function profile()

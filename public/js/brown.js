@@ -241,10 +241,129 @@ $(document).ready(function()
 
 	if($('.chat-now-btn').length > 0)
 	{
+		function chatRead()
+		{
+			var objDiv = document.getElementsByClassName('chat-history')[0];
+			objDiv.scrollTop = objDiv.scrollHeight;
+			//$('.chat-history').animate({ scrollTop: $('#chat-end').offset().top }, 'slow');
+			var convId = $('#frm-chat-box').attr('convid');
+
+			$('.chat-history ul li').each(function () {
+				$('[id="' + this.id + '"]:gt(0)').remove();
+			});
+
+			$.ajax({
+				url: '/chat/readall/'+convId,
+				success: function(response)
+				{
+
+				}
+			});
+		}
+
+
+		$('.cancel-chat-pop').on('click', function(){
+			$('.chat-wrapper').fadeOut();
+			return false;
+		});
+
 		$('.chat-now-btn').on('click', function(){
-			$('.chat-wrapper').fadeIn();
+			var friendUserId = $(this).attr('userid');
+
+			$.ajax({
+				url: '/chat/initiate',
+				data: { friendUserId: friendUserId },
+				dataType: 'json',
+				success: function(response)
+				{
+					if(response.id)
+					{
+						$.ajax({
+							url: '/chat/recentmessages/'+response.id,
+							data: { friendUserId: friendUserId },
+							dataType: 'json',
+							success: function(resp)
+							{
+								$('.chat-history ul').html(resp.html);
+								if(resp.lastMessageId)
+									$('.chat-history ul').attr('lastmesg', resp.lastmessageId);
+								
+								$('#frm-chat-box').attr('convid', response.id);	
+								$('.chat-wrapper').fadeIn();
+								chatRead();
+							}
+						});
+					}
+				}
+			});
+		});
+
+
+		// Recieve
+
+		function retrieveMsgs()
+		{
+			var convId = $('#frm-chat-box').attr('convid');
+			if(convId)
+			{
+				
+				var lastMessageId = $('.chat-history ul').attr('lastmesg');
+				$.ajax({
+					url: '/chat/receivemessage/'+convId,
+					data:{messageId: lastMessageId},
+					success: function(response)
+					{
+						$('.chat-history ul').append(response.html);
+						if(response.lastmessageId)
+						{
+							$('.chat-history ul').attr('lastmesg', response.lastmessageId);
+							chatRead();
+						}
+					}
+				});
+			}
+
+		}
+		setTimeout(function(){
+			setInterval(retrieveMsgs, 2000);
+		}, 5000);
+
+	}
+
+
+	
+
+
+	if($('#frm-chat-box').length > 0)
+	{
+		$('#frm-chat-box').on('submit', function()
+		{
+			var message = $('#message-to-send').val();
+			var conversationId = $(this).attr('convid');
+
+			$.ajax({
+
+				url: '/chat/sendmessage/'+conversationId,
+				data: {message: message},
+				dataType: 'json',
+				type: 'post',
+				success: function(response)
+				{
+					if(response.html)
+					{
+						$('.chat-history ul').append(response.html);
+						$('#message-to-send').val('');
+						chatRead();
+						// TODO: Prevent for Multiple Submission
+					}
+				}
+			});
+
+			return false;
+
 		});
 	}
+
 
 	if($('.view-more').length > 0)
 	{
@@ -261,7 +380,6 @@ $(document).ready(function()
 					$('.view-list').append(response.html);
 					if(response.pageno)
 					{
-						console.log(response.pageno);
 						$('.view-more').attr('pageno', response.pageno);
 					}
 					else
@@ -275,6 +393,26 @@ $(document).ready(function()
 			return false;
 		});
 	}
+
+	function getUnread()
+	{
+
+		$.ajax({
+			url: '/chat/getallunread',
+			success: function(response)
+			{
+				if(response.totalUnread)
+					$('.total-ud-count').html('('+response.totalUnread+')');
+				
+				$('#chat-message-list').html(response.html);
+			}
+		});
+
+	}
+
+
+
+	setInterval(getUnread, 5000);
 	
 
 

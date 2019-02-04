@@ -46,3 +46,12 @@ Route::get('/cancelfriend/{id}', 'UserController@removeFriend');
 Route::get('/approvefriend/{id}', 'UserController@acceptFriend');
 Route::get('/declinefriend/{id}', 'UserController@declineFriend');
 Route::get('/listusers', 'UserController@listings');
+
+Route::get('/chat/initiate', 'ConversionController@initiate');
+Route::get('/chat/recentmessages/{id}', 'ConversionController@recentmessages');
+Route::post('/chat/sendmessage/{id}', 'ConversionController@sendMessage');
+Route::get('/chat/receivemessage/{id}', 'ConversionController@retrieveMessages');
+Route::get('/chat/readall/{id}', 'ConversionController@readAll');
+Route::get('/chat/getallunread', 'ConversionController@getallunread');
+
+

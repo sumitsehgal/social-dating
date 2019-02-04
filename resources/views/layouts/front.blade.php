@@ -206,6 +206,36 @@
                                     </form>
                                 </div>
                             </li>
+
+                            <li class="nav-item dropdown">
+
+                                <?php
+                                $totalUnread = Chat::messages()->for(auth()->user())->unreadCount();
+                                $cs = auth()->user()->conversations;
+
+                                
+
+                                ?>
+
+
+                                <a id="navbarDropdown2" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Messages <span class="total-ud-count">({{$totalUnread}})</span> <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2" id="chat-message-list">
+                                   
+                                   @if($cs->isNotEmpty())
+                                        @foreach($cs as $s)
+                                            <?php $urd = Chat::conversation($s)->for(auth()->user())->unreadCount();  ?>
+                                            @if($urd > 0)
+                                            <?php $frd = $s->users()->where('id', '!=', auth()->user()->id)->first(); ?>
+                                            <a class="user-msg-link" class="dropdown-item" href="/user/{{$frd->id}}"><i class="fa fa-user-o" aria-hidden="true"></i>
+                                                {{ $frd->name }} ({{$urd}})
+                                            </a>
+                                            @endif
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </li>
                             @else
                                 <li><a class="popup-with-zoom-anim" href="#small-dialog"><i class="mdi mdi-key-variant"></i>Login</a></li>
                                 <!-- <li><a href="#register_form" class="popup-with-zoom-anim"><i class="fa fa-user-plus"></i>Registration</a></li> -->

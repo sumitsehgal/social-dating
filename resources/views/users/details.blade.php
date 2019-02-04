@@ -71,7 +71,7 @@
                                     @else
                                         <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn add-friend" userid="{{$user->id}}" >Add Friend <img src="img/user.png" alt=""></a>
                                     @endif
-                                    <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn">Chat Now <img src="img/comment.png" alt=""></a>
+                                    <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn" userid="{{$user->id}}">Chat Now ({{$unread}}) <img src="img/comment.png" alt=""></a>
                                 @else
                                 <a href="/profile" class="btn form-control login_btn "  >Edit Profile <img src="img/user.png" alt=""></a>
                                 @endif
@@ -217,8 +217,21 @@
             </section>
             <section class="chat-wrapper" style="display:none;">
                 <div class="chat">
+                    <style>
+                        .chat-header .img-circle{
+                            width:75px;
+                            height:75px;
+                        }
+                    </style>
                   <div class="chat-header clearfix">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
+                  @if($user->getMedia('avatars')->isNotEmpty())
+                        <img class="img-circle" src="{{$user->getMedia('avatars')->last()->getUrl()}}"  />
+                    @elseif($user->gender == 'Male')
+                        <img class="img-circle" src="{{ asset('male_dp.jpeg') }}" alt="">
+                    @else
+                        <img class="img-circle" src="{{ asset('female_dp.jpeg') }}" alt="">
+                    @endif
+                    
 
                     <div class="chat-about">
                       <div class="chat-with">Chat with {{$user->name}}</div>
@@ -228,70 +241,59 @@
               </div> <!-- end chat-header -->
 
               <div class="chat-history">
-                <ul>
-                  <li class="clearfix">
-                    <div class="message-data align-right">
-                      <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-                      <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+                <ul lastmesg="{{$lastMessage}}">
+                    <li class="clearfix">
+                        <div class="message-data align-right">
+                            <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
+                            <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+                        </div>
+                        <div class="message other-message float-right">
+                            Hi Vincent, how are you? How is the project coming along?
+                        </div>
+                    </li>
+                    <li>
+                        <div class="message-data">
+                            <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                            <span class="message-data-time">10:12 AM, Today</span>
+                        </div>
+                        <div class="message my-message">
+                            Are we meeting today? Project has been already finished and I have results to show you.
+                        </div>
+                    </li>
 
-                  </div>
-                  <div class="message other-message float-right">
-                      Hi Vincent, how are you? How is the project coming along?
-                  </div>
-              </li>
+         
 
-              <li>
-                <div class="message-data">
-                  <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-                  <span class="message-data-time">10:12 AM, Today</span>
-              </div>
-              <div class="message my-message">
-                  Are we meeting today? Project has been already finished and I have results to show you.
-              </div>
-          </li>
-
-          <li class="clearfix">
-            <div class="message-data align-right">
-              <span class="message-data-time" >10:14 AM, Today</span> &nbsp; &nbsp;
-              <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
-
-          </div>
-          <div class="message other-message float-right">
-              Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
-          </div>
-      </li>
-
-      <li>
-        <div class="message-data">
-          <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-          <span class="message-data-time">10:20 AM, Today</span>
-      </div>
-      <div class="message my-message">
-          Actually everything was fine. I'm very excited to show this to our team.
-      </div>
-  </li>
-
-  <li>
-    <div class="message-data">
-      <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-      <span class="message-data-time">10:31 AM, Today</span>
-  </div>
-  <i class="fa fa-circle online"></i>
-  <i class="fa fa-circle online" style="color: #AED2A6"></i>
-  <i class="fa fa-circle online" style="color:#DAE9DA"></i>
-</li>
+<!-- <li>
+<div class="message-data">
+<span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+<span class="message-data-time">10:31 AM, Today</span>
+</div>
+<i class="fa fa-circle online"></i>
+<i class="fa fa-circle online" style="color: #AED2A6"></i>
+<i class="fa fa-circle online" style="color:#DAE9DA"></i>
+</li> -->
 
 </ul>
-
+<div id="chat-end"></div>
 </div> <!-- end chat-history -->
 
 <div class="chat-message clearfix">
-    <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+    <form method="post" id="frm-chat-box">
+        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
 
-    <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
-    <i class="fa fa-file-image-o"></i>
+        <!-- <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+        <i class="fa fa-file-image-o"></i> -->
 
-    <button>Send</button>
+        <button type="submit">Send</button>
+        <a href="javascript:void(0);" style="float: right;
+color: #94C2ED;
+font-size: 16px;
+text-transform: uppercase;
+border: none;
+cursor: pointer;
+font-weight: bold;
+background: #F2F5F8;" class="cancel-chat-pop">Cancel</a>
+    </form>
 
 </div> <!-- end chat-message -->
 

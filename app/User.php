@@ -65,6 +65,11 @@ class User extends Authenticatable implements HasMedia //implements MustVerifyEm
         return $this->hasOne('App\Profile');
     }
 
+    public function conversations()
+    {
+        return $this->belongsToMany('\Musonza\Chat\Models\Conversation', 'mc_conversation_user', 'user_id', 'conversation_id')->withTimestamps();
+    }
+
     // public function registerMediaConversions(Media $media = null)
     // {
     //     $this->addMediaConversion('thumbs')
