@@ -34,6 +34,7 @@
         </style>
     </head>
     <body class="{{ \App::getLocale() }}">
+    <div class="loading" style="display:none;"><div class="lds-heart"><div></div></div></div>
        
        <div class="login_form_inner zoom-anim-dialog mfp-hide" id="small-dialog">
            <h4>{{__('register.login') }}</h4>

@@ -305,7 +305,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
   background: #fff;
 }
 
-.loading {
+/* .loading {
   font-family: "Averia Libre", cursive;
   text-transform: uppercase;
   width: 150px;
@@ -319,8 +319,8 @@ body, p, h1, h2, h3, h4, h5, h6 {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
+} */
+/* 
 .loading span {
   position: relative;
   z-index: 999;
@@ -418,7 +418,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
     -webkit-transform: translateX(-50px);
     transform: translateX(-50px);
   }
-}
+} */
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -8127,3 +8127,8 @@ body, p, h1, h2, h3, h4, h5, h6 {
 /* End Footer area css
 ============================================================================================ */
 /*---------------------------------------------------- */
+
+
+
+
+

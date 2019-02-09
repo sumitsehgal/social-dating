@@ -27,7 +27,7 @@
                             @if(!Auth::check())
                             <div class="registration_form_s">
                                 <h4>{{ __('register.register_head') }}</h4>
-                                <form  method="POST" action="{{ route('register') }}" id="home-registration" class="frm-register">
+                                <form  method="POST" action="{{ route('register') }}" id="home-registration" class="frm-register register-btn-submit">
                                     @csrf
                                     <div class="form-group">
                                         <input type="email" class="form-control" id="reg_email2" placeholder="{{ __('register.email') }}" name="email" value="{{ old('email') }}" required >
@@ -72,7 +72,7 @@
                                         </div>
                                     </div>
                                     <div class="reg_chose form-group">
-                                        <button type="submit" value="LogIn" class="btn form-control login_btn">{{ __('register.register') }}</button>
+                                        <button type="submit" value="LogIn" class="btn form-control login_btn ">{{ __('register.register') }}</button>
                                     </div>
                                 </form>
                             </div>
@@ -283,7 +283,7 @@
                                 <strong>Unlimited</strong> public playlists
                             </li>
                         </ul>
-                        <a href="/membership/upgrade/{{$plan->stripe_plan_id}}" class="btn btn-success">Subscribe Now</a>
+                        <a href="/membership/upgrade/{{$plan->stripe_plan_id}}" class="btn btn-success  @auth @else login-check  @endauth ">{{ __('register.subscribe_now') }}</a>
                     </div>
                 @endforeach
             @endif    

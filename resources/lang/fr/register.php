@@ -58,6 +58,7 @@ return [
     'exp_month' => 'Mois Exp',
     'exp_year' => 'Année Exp',
     'cvv' => 'CVV',
-    'continue_checkout' => 'Continuer à la caisse'
+    'continue_checkout' => 'Continuer à la caisse',
+    'subscribe_now' => 'Abonnez-vous maintenant'
 
 ];

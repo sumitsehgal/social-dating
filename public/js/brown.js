@@ -15,6 +15,9 @@ $(document).ready(function()
 	$.ajaxSetup({
 		headers: {
 			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		},
+		beforeSend: function() {
+			$('.loading').show();
 		}
 	});
 
@@ -28,7 +31,7 @@ $(document).ready(function()
 			  		alert('Email Already Exist');
 			  	}
 			}).done(function() {
-			    
+			    $('.loading').hide();
 			  })
 			  .fail(function() {
 			    
@@ -51,7 +54,7 @@ $(document).ready(function()
 		  console.log(response);
 		  window.location = '/home';
 		}).done(function() {
-		    	
+			$('.loading').hide();
 		  })
 		  .fail(function(response) {
 		  	console.log(response);
@@ -90,7 +93,7 @@ $(document).ready(function()
 	var datePicker = $('.datetime');
 	if(datePicker.length > 0)
 	{
-		datePicker.datepicker();
+		datePicker.datepicker({maxDate: new Date()});
 	}
 
 		$('body').on('click', '.add-friend' ,function()
@@ -105,10 +108,11 @@ $(document).ready(function()
 					dataType: 'json',
 					complete: function()
 					{
-
+						$('.loading').hide();
 					},
 					beforeSend: function()
 					{
+						$('.loading').show();
 						btn.html('Adding...')
 					},
 					success: function(response)
@@ -142,10 +146,11 @@ $(document).ready(function()
 					dataType: 'json',
 					complete: function()
 					{
-
+						$('.loading').hide();
 					},
 					beforeSend: function()
 					{
+						$('.loading').show();
 						btn.html('Cancelling...')
 					},
 					success: function(response)
@@ -182,10 +187,11 @@ $(document).ready(function()
 					dataType: 'json',
 					complete: function()
 					{
-
+						$('.loading').hide();
 					},
 					beforeSend: function()
 					{
+						$('.loading').show();
 						btn.html('Accepting...')
 					},
 					success: function(response)
@@ -223,10 +229,11 @@ $(document).ready(function()
 					dataType: 'json',
 					complete: function()
 					{
-
+						$('.loading').hide();
 					},
 					beforeSend: function()
 					{
+						$('.loading').show();
 						btn.html('Deleting...')
 					},
 					success: function(response)
@@ -283,6 +290,10 @@ $(document).ready(function()
 				url: '/chat/initiate',
 				data: { friendUserId: friendUserId },
 				dataType: 'json',
+				beforeSend: function()
+				{
+					$('.loading').show();
+				},
 				success: function(response)
 				{
 					if(response.id)
@@ -291,6 +302,10 @@ $(document).ready(function()
 							url: '/chat/recentmessages/'+response.id,
 							data: { friendUserId: friendUserId },
 							dataType: 'json',
+							complete: function()
+							{
+								$('.loading').hide();	
+							},
 							success: function(resp)
 							{
 								$('.chat-history ul').html(resp.html);
@@ -384,6 +399,14 @@ $(document).ready(function()
 
 				url: '/listusers?page='+pageNo,
 				dataType: 'json',
+				beforeSend: function()
+				{
+					$('.loading').show();
+				},
+				complete: function()
+				{
+					$('.loading').hide();
+				},
 				success: function(response)
 				{
 					$('.view-list').append(response.html);
@@ -408,6 +431,13 @@ $(document).ready(function()
 
 		$.ajax({
 			url: '/chat/getallunread',
+			beforeSend: function()
+			{
+
+			},
+			complete:function(){
+				$('.loading').hide();
+			},
 			success: function(response)
 			{
 				if(response.totalUnread)
@@ -437,8 +467,24 @@ $(document).ready(function()
 				alert("Password Mismatch");
 				return false;
 			}
+
+			$('.loading').show();
+
 		});
 	}
+
+	if($('.login-check').length > 0)
+	{
+		$('.login-check').on('click', function()
+		{
+			alert("Please Register / Login!!!");
+			window.scrollTo(0, 0);
+			return false;
+		});
+	}
+
+
+
 
 
 });
