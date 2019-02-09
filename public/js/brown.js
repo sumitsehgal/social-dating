@@ -462,6 +462,13 @@ $(document).ready(function()
 			var password = $(this).find('.password').first().val();
 			var cPassword = $(this).find('.confirm-password').first().val();
 
+			if(password.length < 6)
+			{
+				alert('The password must be at least 6 characters.');
+				return false;
+			}
+
+
 			if(password != cPassword)
 			{
 				alert("Password Mismatch");
