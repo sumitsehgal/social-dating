@@ -13,37 +13,37 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="profile-wrapper">
-                    <h4>My Profile</h4>
+                    <h4>{{ __('home.profile') }} </h4>
                     <form action="/profile-post" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="profile-form">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email" name="email" readonly value="{{$user->email}}">
+                                <input type="email" class="form-control" placeholder="{{ __('register.email') }}" name="email" readonly value="{{$user->email}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Full Name" value="{{$user->name}}" name="name">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.full_name') }}" value="{{$user->name}}" name="name">
                             </div>
                             <!-- <div class="form-group">
                                 <input type="text" class="form-control"  placeholder="Username">
                             </div> -->
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Height" name="height" value="{{@$user->profile->height}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.height') }}" name="height" value="{{@$user->profile->height}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Weight" name="weight" value="{{@$user->profile->weight}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.weight') }}" name="weight" value="{{@$user->profile->weight}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control datetime"  placeholder="DOB" name="dob" value="@if(!empty($user->dob)) {{ $user->dob->format('m/d/Y') }} @endif">
+                                <input type="text" class="form-control datetime"  placeholder="{{ __('register.dob') }}" name="dob" value="@if(!empty($user->dob)) {{ $user->dob->format('m/d/Y') }} @endif">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Country" name="country" value="{{@$user->profile->country}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.country') }}" name="country" value="{{@$user->profile->country}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="City" name="city" value="{{@$user->profile->city}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.city') }}" name="city" value="{{@$user->profile->city}}">
                             </div>
                             <div class="form-group">
                                 <select name="relationship" class="form-control">
-                                    <option value="">Select Relationship</option>
+                                    <option value="">{{ __('register.select_relationship') }}</option>
                                     @if(!empty(App\Profile::RELATIONSHIPS))
                                         @foreach(App\Profile::RELATIONSHIPS as $key => $relation)
                                             <option value="{{$key}}" @if($key == @$user->profile->relationship) selected="selected" @endif >{{$relation}}</option>
@@ -53,7 +53,7 @@
                             </div>
                             <div class="form-group">
                                 <select name="looking_for" class="form-control">
-                                    <option value="">Looking For</option>
+                                    <option value="">{{ __('register.lookingfor') }}</option>
                                     @if(!empty(App\Profile::LOOKING_FOR))
                                         @foreach(App\Profile::LOOKING_FOR as $key => $relation)
                                             <option value="{{$key}}" @if($key == @$user->profile->looking_for) selected="selected" @endif >{{$relation}}</option>
@@ -66,7 +66,7 @@
                             </div> -->
                             <div class="form-group">
                                 <select name="smoking" class="form-control">
-                                    <option value="">Do you Smoke ?</option>
+                                    <option value="">{{ __('register.smoking') }}</option>
                                     @if(!empty(App\Profile::IS_SMOKING))
                                         @foreach(App\Profile::IS_SMOKING as $key => $relation)
                                             <option value="{{$key}}" @if($key == @$user->profile->smoking) selected="selected" @endif >{{$relation}}</option>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="form-group">
                                 <select name="drinking" class="form-control">
-                                    <option value="">Do you Drink ?</option>
+                                    <option value="">{{ __('register.drinking') }}</option>
                                     @if(!empty(App\Profile::IS_DRINKING))
                                         @foreach(App\Profile::IS_DRINKING as $key => $relation)
                                             <option value="{{$key}}" @if($key == @$user->profile->drinking) selected="selected" @endif>{{$relation}}</option>
@@ -85,25 +85,25 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Language" name="languages" value="{{@$user->profile->languages}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.language') }}" name="languages" value="{{@$user->profile->languages}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Work As" name="work_as" value="{{@$user->profile->work_as}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.work_as') }}" name="work_as" value="{{@$user->profile->work_as}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Education" name="education" value="{{@$user->profile->education}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.education') }}" name="education" value="{{@$user->profile->education}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Interst" name="interests" value="{{@$user->profile->interests}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.interest') }}" name="interests" value="{{@$user->profile->interests}}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control"  placeholder="Eye Color" name="eye_color" value="{{@$user->profile->eye_color}}">
+                                <input type="text" class="form-control"  placeholder="{{ __('register.eye_color') }}" name="eye_color" value="{{@$user->profile->eye_color}}">
                             </div>
                             <div class="form-group textarea">
-                                <textarea placeholder="About" name="aboutme">{{ @$user->profile->aboutme }}</textarea>
+                                <textarea placeholder="{{ __('header.about_us_title') }}" name="aboutme">{{ @$user->profile->aboutme }}</textarea>
                             </div>
                             <div class="form-group textarea">
-                                <textarea placeholder="Looking For" name="aboutpartner">{{ @$user->profile->aboutpartner }}</textarea>
+                                <textarea placeholder="{{ __('register.lookingfor') }}" name="aboutpartner">{{ @$user->profile->aboutpartner }}</textarea>
                             </div>
                             <div class="form-group">
                                 <input type="file" class="form-control" name="file">
@@ -116,7 +116,7 @@
                                 @endif
                             </div>
                             <div class="form-group button">
-                                <button type="submit" value="LogIn" class="btn form-control login_btn">Submit</button>
+                                <button type="submit" value="LogIn" class="btn form-control login_btn">{{ __('contact.submit') }}</button>
                             </div>
                         </div>  
                     </form>

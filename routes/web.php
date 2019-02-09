@@ -12,13 +12,14 @@
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/', 'HomeController@welcome')->name('welcome');
-Route::get('/contact', 'HomeController@contact')->name('contact');
-Route::post('/contact', 'HomeController@postContact');
-Route::get('/about-us', 'HomeController@about')->name('about');
+    //     return view('welcome');
+    // });
+    
+    Route::get('/', 'HomeController@welcome')->name('welcome');
+    Route::get('/contact', 'HomeController@contact')->name('contact');
+    Route::post('/contact', 'HomeController@postContact');
+    Route::get('/about-us', 'HomeController@about')->name('about');
+    Route::get('/setlanguage/{locale}', 'HomeController@setlanguage');
 
 Route::get('/signup', function () {
     return view('users.register');
@@ -53,5 +54,8 @@ Route::post('/chat/sendmessage/{id}', 'ConversionController@sendMessage');
 Route::get('/chat/receivemessage/{id}', 'ConversionController@retrieveMessages');
 Route::get('/chat/readall/{id}', 'ConversionController@readAll');
 Route::get('/chat/getallunread', 'ConversionController@getallunread');
+
+
+
 
 

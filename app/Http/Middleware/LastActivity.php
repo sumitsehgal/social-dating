@@ -18,6 +18,12 @@ class LastActivity
      */
     public function handle($request, Closure $next)
     {
+
+        if($request->session()->get('locale'))
+        {
+            \App::setLocale($request->session()->get('locale'));
+        }
+
         if(Auth::check())
         {
             $expiresAt = Carbon::now();

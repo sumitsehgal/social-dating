@@ -26,23 +26,23 @@
                         <div class="col-sm-6">
                             @if(!Auth::check())
                             <div class="registration_form_s">
-                                <h4>Registration</h4>
+                                <h4>{{ __('register.register_head') }}</h4>
                                 <form  method="POST" action="{{ route('register') }}" id="home-registration" class="frm-register">
                                     @csrf
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="reg_email2" placeholder="Email" name="email" value="{{ old('email') }}" required >
+                                        <input type="email" class="form-control" id="reg_email2" placeholder="{{ __('register.email') }}" name="email" value="{{ old('email') }}" required >
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="reg_first2" placeholder="Full Name" name="name" value="{{ old('name') }}" required>
+                                        <input type="text" class="form-control" id="reg_first2" placeholder="{{ __('register.full_name') }}" name="name" value="{{ old('name') }}" required>
                                     </div>
                                     <!-- <div class="form-group">
                                         <input type="text" class="form-control" id="reg_user2" placeholder="Username">
                                     </div> -->
                                     <div class="form-group">
-                                        <input type="password" class="form-control password" id="reg_pass2" placeholder="Password"  name="password" required>
+                                        <input type="password" class="form-control password" id="reg_pass2" placeholder="{{ __('register.password') }}"  name="password" required>
                                     </div>
                                     <div class="form-group">
-                                        <input id="password-confirm" type="password" class="form-control confirm-password" placeholder="Confirm Password" name="password_confirmation" required>
+                                        <input id="password-confirm" type="password" class="form-control confirm-password" placeholder="{{ __('register.confirm_password') }}" name="password_confirmation" required>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -57,22 +57,22 @@
                                                     </ul>
                                                 </div> -->
                                                 <select name="gender" class="form-control input">
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
+                                                    <option value="Male">{{ __('register.male') }}</option>
+                                                    <option value="Female">{{ __('register.female') }}</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <div class="datepicker">
-                                                    <input type='text' class="form-control datetimepicker4 datetime" placeholder="Birthday"  name="dob" required autocomplete="off"/>
+                                                    <input type='text' class="form-control datetimepicker4 datetime" placeholder="{{ __('register.birthday') }}"  name="dob" required autocomplete="off"/>
                                                     <span class="add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="reg_chose form-group">
-                                        <button type="submit" value="LogIn" class="btn form-control login_btn">Register</button>
+                                        <button type="submit" value="LogIn" class="btn form-control login_btn">{{ __('register.register') }}</button>
                                     </div>
                                 </form>
                             </div>
@@ -93,7 +93,7 @@
         <section class="welcome_area">
             <div class="container">
                 <div class="welcome_title">
-                    <h3>Welcome to <span>Brown</span> Sugar Male</h3>
+                    <h3>{{ __('register.welcome_to') }} <span>{{ __('register.brown') }}</span> {{ __('register.sugar') }} {{ __('register.male') }}</h3>
                     <img src="{{ asset('img/w-title-b.png') }}" alt="">
                 </div>
                 <div class="row">
@@ -101,28 +101,28 @@
                         <div class="welcome_item">
                             <img src="{{ asset('images/w-icon-1.png') }}" alt="">
                             <h4 class="counter">{{$users->total()}}</h4>
-                            <h6>Total Members</h6>
+                            <h6>{{ __('register.total_members') }}</h6>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
                             <img src="{{ asset('img/welcome-icon/w-icon-2.png') }}" alt="">
                             <h4 class="counter">{{ $onlineMale + $onlineFemale }}</h4>
-                            <h6>Members online</h6>
+                            <h6>{{ __('register.member_online') }}</h6>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
                             <img src="{{ asset('img/welcome-icon/w-icon-3.png') }}" alt="">
                             <h4 class="counter">{{$onlineMale}}</h4>
-                            <h6>Men online</h6>
+                            <h6>{{ __('register.male_online')  }}</h6>
                         </div>
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="welcome_item">
                             <img src="{{ asset('img/welcome-icon/w-icon-4.png') }}" alt="">
                             <h4 class="counter">{{$onlineFemale}}</h4>
-                            <h6>Women online</h6>
+                            <h6>{{ __('register.female_online') }}</h6>
                         </div>
                     </div>
                 </div>
@@ -139,8 +139,8 @@
                         <div class="item">
                             <div class="col-md-7">
                                 <div class="download_app_icon">
-                                    <h3>Download <span>Brown </span><span>Sugar Male</span> app</h3>
-                                    <h5>Free Available in All Store PlayStore, AppStore & Microsoft Store</h5>
+                                    <h3> {{ __('register.download') }} <span>{{ __('register.brown') }} </span><span>{{ __('register.sugar') }} {{ __('register.male') }}</span> {{ __('register.app') }}</h3>
+                                    <h5>{{ __('register.free_phrase') }}</h5>
                                     <ul>
                                         <li><a href="#"><i class="fa fa-android"></i></a></li>
                                         <li><a href="#"><i class="fa fa-apple"></i></a></li>
@@ -181,15 +181,15 @@
                                             <div class="download_moblile_slider">
                                                 <div class="item">
                                                     <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
-                                                    Coming Soon
+                                                    {{ __('register.coming_soon') }}
                                                 </div>
                                                 <div class="item">
                                                     <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
-                                                    Coming Soon
+                                                    {{ __('register.coming_soon') }}
                                                 </div>
                                                 <div class="item">
                                                     <!-- <img src="img/mobile-slider/screen-1.png" alt=""> -->
-                                                    Coming Soon
+                                                    {{ __('register.coming_soon') }}
                                                 </div>
                                                 <!-- <div class="item">
                                                     <img src="img/mobile-slider/screen-1.png" alt="">
@@ -212,28 +212,28 @@
         <section class="find_soul_area">
             <div class="container">
                 <div class="welcome_title">
-                    <h3>Steps to Find Your Soul mate</h3>
+                    <h3>{{ __('register.soul_steps') }}</h3>
                     <img src="{{ asset('img/w-title-b.png') }}" alt="">
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="find_soul_item">
                             <img src="{{ asset('images/soul-1.png') }}" alt="">
-                            <h4>Create a profile</h4>
+                            <h4>{{ __('register.create_profile') }}</h4>
                             <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="find_soul_item">
                             <img src="{{ asset('img/soul-icon/soul-2.png') }}" alt="">
-                            <h4>Find matches </h4>
+                            <h4>{{ __('register.findmatches') }} </h4>
                             <p>Lorem Ipsum Lorem ipsum Lorem ipsum</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="find_soul_item">
                             <img src="{{ asset('images/soul-3.png') }}" alt="">
-                            <h4>Start Dating</h4>
+                            <h4>{{ __('register.startdating') }}</h4>
                             <p>Lorem ipsum Lorem ipsum Lorem ipsum</p>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                        <!--  <i class="fa fa-play" aria-hidden="true" id="play_btn"></i>
                         <i class="fa fa-pause" aria-hidden="true" id="pause_btn"></i> -->
                         <div class="video_content">
-                            <h4>Find your perfect match With us </h4>
+                            <h4>{{  __('register.find_perfect_match') }} </h4>
                         </div>
                     </div>
                 </div>
@@ -298,7 +298,7 @@
         <section class="register_members_slider">
             <div class="container">
                 <div class="welcome_title">
-                    <h3>Latest registered members</h3>
+                    <h3>{{ __('register.latest_register') }}</h3>
                     <img src="{{ asset('img/w-title-b.png') }}" alt="">
                 </div>
                 <div class="r_members_inner">

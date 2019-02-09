@@ -20,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        
+
     }
 
     /**
@@ -106,5 +106,16 @@ class HomeController extends Controller
     public function about()
     {
         return view('about');
+    }
+
+    public function setlanguage(Request $request, $locale = "en")
+    {
+        if($locale)
+        {
+            $request->session()->put('locale', $locale);
+            \App::setLocale($locale);
+        }
+
+        return back()->withInput();
     }
 }

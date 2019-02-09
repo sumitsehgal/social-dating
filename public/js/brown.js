@@ -3,6 +3,15 @@
 $(document).ready(function()
 {
 
+
+	$('.language_drop').on('change', function()
+	{
+		var locale = $(this).val();
+
+		window.location.href = '/setlanguage/'+locale;
+
+	});
+
 	$.ajaxSetup({
 		headers: {
 			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

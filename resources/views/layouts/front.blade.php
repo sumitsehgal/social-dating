@@ -33,14 +33,14 @@
         div#ui-datepicker-div {z-index: 999 !important;}
         </style>
     </head>
-    <body>
+    <body class="{{ \App::getLocale() }}">
        
        <div class="login_form_inner zoom-anim-dialog mfp-hide" id="small-dialog">
-           <h4>Login</h4>
+           <h4>{{__('register.login') }}</h4>
            <form method="POST" action="{{ route('login') }}" id="lgn-frm">
                 @csrf
                 <div id="errs"></div>
-               <input type="email"  placeholder="Email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required id='lg-email'>
+               <input type="email"  placeholder={{ __('register.email') }} class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required id='lg-email'>
                @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
@@ -55,10 +55,10 @@
                <div class="login_btn_area">
                    <button type="submit" value="LogIn" class="btn form-control login_btn">LogIn</button>
                    <a class="btn btn-link forgot popup-with-zoom-anim" href="#forgot-dialog">
-                        {{ __('Forgot Your Password?') }}
+                        {{ __('register.forgot') }}
                     </a>
                    <div class="login_social">
-                       <h5>Login With</h5>
+                       <h5>{{ __('register.loginwith') }}</h5>
                        <ul>
                            <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
                            <li><a href="{{ url('login/google') }}"><i class="fa fa-google-plus"></i></a></li>
@@ -132,18 +132,18 @@
             </div>
         </div>
         <div class="login_form_inner zoom-anim-dialog mfp-hide" id="forgot-dialog">
-           <h4>Forgot Password</h4>
+           <h4>{{ __('register.forgotpassword') }}</h4>
            <form method="POST" action="{{ route('login') }}" id="lgn-frm1">
                 @csrf
                 <div id="errs"></div>
-               <input type="email"  placeholder="Email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required id='lg-email1'>
+               <input type="email"  placeholder="{{ __('register.email') }}" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required id='lg-email1'>
                @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                 @endif
                <div class="login_btn_area">
-                   <button type="submit" value="LogIn" class="btn form-control login_btn">Submit</button>
+                   <button type="submit" value="LogIn" class="btn form-control login_btn">{{ __('contact.submit') }}</button>
                </div>
            </form>
            <img class="mfp-close" src="{{ asset('img/close-btn.png') }}" alt="">
@@ -167,15 +167,15 @@
                     <ul class="nav navbar-nav">
 
                         <li class=" {{ request()->is('/') ? 'active' : '' }}">
-                            <a href="/" >Home</a>
+                            <a href="/" >{{ __('header.home_title') }}</a>
                         </li>
                         @if (Route::has('login'))
                             @auth
-                                <li class="{{ request()->is('home') ? 'active' : '' }}"><a href="/home">Dashboard</a></li>
+                                <li class="{{ request()->is('home') ? 'active' : '' }}"><a href="/home">{{ __('register.dashboard') }}</a></li>
                             @endauth
                         @endif
-                        <li class="{{ request()->is('about-us') ? 'active' : '' }}"><a href="/about-us">About Us</a></li>
-                        <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="/contact">Contact Us</a></li>
+                        <li class="{{ request()->is('about-us') ? 'active' : '' }}"><a href="/about-us">{{ __('header.about_us_title') }}</a></li>
+                        <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="/contact">{{ __('header.contact_us_title') }}</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @if (Route::has('login'))
@@ -193,12 +193,12 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="profile-button logout-button" class="dropdown-item" href="/user/{{Auth::user()->id}}"><i class="fa fa-user-o" aria-hidden="true"></i>
-                                        {{ __('Profile') }}
+                                        {{ __('register.profile') }}
                                     </a>
                                     <a class="logout-button" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
-                                        {{ __('Logout') }}
+                                        {{ __('register.logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -219,7 +219,7 @@
 
 
                                 <a id="navbarDropdown2" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Messages <span class="total-ud-count">({{$totalUnread}})</span> <span class="caret"></span>
+                                    {{ __('register.messages') }} <span class="total-ud-count">({{$totalUnread}})</span> <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2" id="chat-message-list">
                                    
@@ -237,18 +237,16 @@
                                 </div>
                             </li>
                             @else
-                                <li><a class="popup-with-zoom-anim" href="#small-dialog"><i class="mdi mdi-key-variant"></i>Login</a></li>
+                                <li><a class="popup-with-zoom-anim" href="#small-dialog"><i class="mdi mdi-key-variant"></i>{{ __('header.login_title') }}</a></li>
                                 <!-- <li><a href="#register_form" class="popup-with-zoom-anim"><i class="fa fa-user-plus"></i>Registration</a></li> -->
 
                             @endauth
                         @endif
-                        
-                    
                         <li class="flag_drop">
                             <div class="selector">
                                 <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                                  <option value='yt' data-image="{{ asset('img/country-aus.png') }}" data-imagecss="flag yt" data-title="English">English</option>
-                                  <option value='yt' data-image="{{ asset('img/country-fre.png') }}" data-imagecss="flag yt" data-title="English">French</option>
+                                  <option value='en' data-image="{{ asset('img/country-aus.png') }}" data-imagecss="flag yt" data-title="English" @if(session('locale') == 'en') selected="selected"  @endif >English</option>
+                                  <option value='fr' data-image="{{ asset('img/country-fre.png') }}" data-imagecss="flag yt" data-title="English" @if(session('locale') == 'fr') selected="selected"  @endif>French</option>
                                 </select>
                             </div>
                         </li>
@@ -273,7 +271,7 @@
             <div class="copyright">
                 <div class="copyright_left">
                     <div class="copyright_text">
-                        <h4>Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Brown Sugar Male</h4>
+                        <h4>{{ __('footer.copyright') }} &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{ __('register.brown') }} {{ __('register.sugar') }} {{ __('register.male') }}</h4>
                     </div>
                 </div>
                 <div class="copyright_right">

@@ -6,9 +6,9 @@
         <section class="banner_area">
             <div class="container">
                 <div class="banner_content">
-                    <h3 title="About us"><img class="left_img" src="img/banner/t-left-img.png" alt="">About us<img class="right_img" src="img/banner/t-right-img.png" alt=""></h3>
-                    <a href="/">Home</a>
-                    <a href="/about-us">About us</a>
+                    <h3 title="About us"><img class="left_img" src="img/banner/t-left-img.png" alt="">{{ __('header.about_us_title') }}<img class="right_img" src="img/banner/t-right-img.png" alt=""></h3>
+                    <a href="/">{{ __('header.home_title') }}</a>
+                    <a href="/about-us">{{ __('header.about_us_title') }}</a>
                 </div>
             </div>
         </section>
@@ -18,13 +18,13 @@
         <section class="who_we_are_area">
             <div class="container">
                 <div class="welcome_title">
-                    <h3>Who We Are</h3>
+                    <h3>{{ __('about.whoweare') }}</h3>
                     <img src="img/w-title-b.png" alt="">
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="who_we_left">
-                            <h4>We Are Brown Sugar Male & We Care About Your Happiness</h4>
+                            <h4>{{ __('about.whowetitle') }}</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -45,22 +45,22 @@
         <section class="find_soul_area">
             <div class="container">
                 <div class="welcome_title">
-                    <h3>Why People Choose us</h3>
+                    <h3>{{ __('about.whypeoplechosing') }}</h3>
                     <img src="img/w-title-b.png" alt="">
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="find_soul_item">
                             <img src="img/soul-icon/soul-4.png" alt="">
-                            <h4>Worthy Candidates</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                            <h4>{{ __('about.worthycandidates') }}</h4>
+                            <p>{{ __('about.worthycontents') }}</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="find_soul_item">
                             <img src="img/soul-icon/soul-5.png" alt="">
-                            <h4>Absolute Security</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                            <h4>{{ __('about.absolutesecurity') }}</h4>
+                            <p>{{ __('about.absolutecontent') }}</p>
                         </div>
                     </div>
                     <!-- <div class="col-md-4">
@@ -95,9 +95,9 @@
             <div class="left_best_content">
                 <div class="left_inner_content">
                     <div class="left_inner_right">
-                        <h4>Best Ways To Find Your True Sole Mate</h4>
-                        <p>Join The Best Free Online Dating </p>
-                        <a href="/register" class="btn form-control login_btn">Join Now</a>
+                        <h4>{{ __('about.bestway') }}</h4>
+                        <p>{{ __('about.joinbest') }} </p>
+                        <a href="/register" class="btn form-control login_btn">{{ __('about.joinnow') }}</a>
                     </div>
                 </div>
                 <div class="right_best_content"></div>
@@ -108,7 +108,7 @@
         <section class="our_team_area">
             <div class="container">
                 <div class="welcome_title">
-                    <h3>Meet Our Team</h3>
+                    <h3>{{ __('about.meetteam') }}</h3>
                     <img src="img/w-title-b.png" alt="">
                 </div>
                 <div class="row team_inner_area">
@@ -118,7 +118,7 @@
                             <a class="plus_zoom" href="#"></a>
                             <div class="hover_details">
                                 <h4>Neel Duchaine</h4>
-                                <h5>Founder</h5>
+                                <h5>{{ __('about.founder') }}</h5>
                             </div>
                         </div>
                     </div>

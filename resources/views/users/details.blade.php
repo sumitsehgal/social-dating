@@ -25,7 +25,7 @@
                 </div>
                 <div class="user_name">
                     <h3>{{$user->name}}</h3>
-                    <h4>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}} years old  @endif &nbsp; </h4>
+                    <h4>@if($user->dob && !empty($user->dob)) {{ Carbon\Carbon::parse($user->dob)->age}} {{  __('home.years_old') }}  @endif &nbsp; </h4>
                     <ul>
                         <!-- <li><a href="#">Frace, Paris</a></li> -->
                         <li class="dropdown extara">
@@ -63,20 +63,20 @@
                             @if(!empty($currentUser))
                                 @if($currentUser->id != $user->id)
                                     @if($currentUser->hasSentFriendRequestTo($user))
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn cancel-friend" userid="{{$user->id}}" >Cancel Request <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn cancel-friend" userid="{{$user->id}}" >{{ __('home.cancel_request') }} <img src="img/user.png" alt=""></a>
                                     @elseif($currentUser->isFriendWith($user))
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn " userid="{{$user->id}}" >Friend <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn " userid="{{$user->id}}" >{{ __('home.friend') }} <img src="img/user.png" alt=""></a>
                                     @elseif($currentUser->hasFriendRequestFrom($user))
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn approve-request" userid="{{$user->id}}" >Confirm <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn approve-request" userid="{{$user->id}}" >{{ __('home.confirm') }} <img src="img/user.png" alt=""></a>
                                     @else
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn add-friend" userid="{{$user->id}}" >Add Friend <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn add-friend" userid="{{$user->id}}" >{{ __('home.addfriend') }} <img src="img/user.png" alt=""></a>
                                     @endif
-                                    <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn" userid="{{$user->id}}">Chat Now ({{$unread}}) <img src="img/comment.png" alt=""></a>
+                                    <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn" userid="{{$user->id}}">{{__('home.chatnow') }} ({{$unread}}) <img src="img/comment.png" alt=""></a>
                                 @else
-                                <a href="/profile" class="btn form-control login_btn "  >Edit Profile <img src="img/user.png" alt=""></a>
+                                <a href="/profile" class="btn form-control login_btn "  > {{ __('home.editprofile') }} <img src="img/user.png" alt=""></a>
                                 @endif
                             @else
-                                <a href="javascript:void(0);" onclick="alert('Please Login'); return;" value="LogIn" class="btn form-control login_btn" userid="{{$user->id}}" >Add Friend <img src="img/user.png" alt=""></a>
+                                <a href="javascript:void(0);" onclick="alert('Please Login'); return;" value="LogIn" class="btn form-control login_btn" userid="{{$user->id}}" > {{ __('home.addfriend') }} <img src="img/user.png" alt=""></a>
                             @endif
                             </div>
                         </div>
@@ -93,9 +93,9 @@
                             <div class="members_profile_inners">
                                 <ul class="nav nav-tabs profile_menu" role="tablist">
                                     <!-- <li role="presentation"><a href="#activity" aria-controls="activity" role="tab" data-toggle="tab">Activity</a></li> -->
-                                    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                                    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">{{ __('home.profile') }}</a></li>
                                     <!-- <li role="presentation"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Sites</a></li> -->
-                                    <li role="presentation"><a href="#friend" aria-controls="friend" role="tab" data-toggle="tab">Friend ({{$user->getFriends()->unique()->count()}})</a></li>
+                                    <li role="presentation"><a href="#friend" aria-controls="friend" role="tab" data-toggle="tab"> {{ __('home.friend') }} ({{$user->getFriends()->unique()->count()}})</a></li>
                                     <!-- <li role="presentation"><a href="#group" aria-controls="group" role="tab" data-toggle="tab">Groups (3)</a></li> -->
                                     <!-- <li role="presentation"><a href="#forums" aria-controls="forums" role="tab" data-toggle="tab">Forums</a></li> -->
                                 </ul>
@@ -103,14 +103,14 @@
                                     <div role="tabpanel" class="tab-pane active fade in" id="profile">
                                         <div class="profile_list">
                                         <ul>
-                                                <li><a href="#">Gender</a></li>
-                                                <li><a href="#">Age</a></li>
-                                                <li><a href="#">Country</a></li>
-                                                <li><a href="#">City</a></li>
-                                                <li><a href="#">Birthday</a></li>
-                                                <li><a href="#">Relationship</a></li>
-                                                <li><a href="#">Looking for a</a></li>
-                                                <li><a href="#">Work as</a></li>
+                                                <li><a href="#">{{ __('home.gender') }}</a></li>
+                                                <li><a href="#">{{ __('home.age') }}</a></li>
+                                                <li><a href="#">{{ __('home.country') }}</a></li>
+                                                <li><a href="#">{{ __('home.city') }}</a></li>
+                                                <li><a href="#">{{ __('home.bdy') }}</a></li>
+                                                <li><a href="#">{{ __('home.relationship') }}</a></li>
+                                                <li><a href="#">{{ __('home.lookingfora') }}</a></li>
+                                                <li><a href="#">{{ __('home.workas') }}</a></li>
                                             </ul>
                                             <ul>
                                                 <li><a href="#">{{$user->gender}}&nbsp;</a></li>
@@ -123,14 +123,14 @@
                                                 <li><a href="#">{{@$user->profile->work_as}}&nbsp;</a></li>
                                             </ul>
                                             <ul>
-                                                <li><a href="#">Education</a></li>
-                                                <li><a href="#">Know</a></li>
-                                                <li><a href="#">Interests</a></li>
-                                                <li><a href="#">Smoking</a></li>
-                                                <li><a href="#">Eye Color</a></li>
-                                                <li><a href="#">Drinking</a></li>
-                                                <li><a href="#">Height</a></li>
-                                                <li><a href="#">Weight</a></li>
+                                                <li><a href="#">{{ __('home.education') }}</a></li>
+                                                <li><a href="#">{{ __('home.know')  }}</a></li>
+                                                <li><a href="#">{{ __('home.interest') }}</a></li>
+                                                <li><a href="#">{{ __('home.smoking') }}</a></li>
+                                                <li><a href="#">{{ __('home.eye_color') }}</a></li>
+                                                <li><a href="#">{{ __('home.drinking') }}</a></li>
+                                                <li><a href="#">{{ __('home.height') }}</a></li>
+                                                <li><a href="#">{{ __('home.weight') }}</a></li>
                                             </ul>
                                             <ul>
                                                 <li><a href="#">{{@$user->profile->education}}&nbsp;</a></li>
@@ -161,14 +161,14 @@
                                                             <img src="{{ asset('female_dp.jpeg') }}" alt="">
                                                         @endif
                                                         <h4>{{$friend->name}}</h4>
-                                                        <h5>@if($friend->dob && !empty($friend->dob)) {{ Carbon\Carbon::parse($friend->dob)->age}}  years old @endif &nbsp;</h5>
+                                                        <h5>@if($friend->dob && !empty($friend->dob)) {{ Carbon\Carbon::parse($friend->dob)->age}}  {{ __('home.years_old') }} @endif &nbsp;</h5>
                                                     </a>
                                                     </div>
                                                 </div>
                                                 @endforeach
                                             </div>
                                             @else
-                                                    <h2>No Friends</h2>
+                                                    <h2>{{ __('home.nofriend') }}</h2>
                                             @endif
                                             
                                         </div>
@@ -185,11 +185,11 @@
                                     </div>
                                 </div>
                                 <div class="members_about_box">
-                                    <h4>About me</h4>
+                                    <h4>{{ __('home.aboutme') }}</h4>
                                     <p>{{@$user->profile->aboutme}}</p>
                                 </div>
                                 <div class="members_about_box">
-                                    <h4>Looking For</h4>
+                                    <h4>{{ __('home.lookingfor') }}</h4>
                                     <h5>{{@$user->profile->looking_for}}</h5>
                                     <p>{{@$user->profile->aboutpartner}}</p>
                                 </div>
@@ -199,7 +199,7 @@
                             <div class="right_sidebar_area">
                                 <aside class="s_widget photo_widget">
                                     <div class="s_title">
-                                        <h4>Photo</h4>
+                                        <h4>{{ __('home.photo') }}</h4>
                                         <img src="img/widget-title-border.png" alt="">
                                     </div>
                                     <ul>
@@ -234,8 +234,8 @@
                     
 
                     <div class="chat-about">
-                      <div class="chat-with">Chat with {{$user->name}}</div>
-                      <div class="chat-num-messages">already 0 messages</div>
+                      <div class="chat-with">{{ __('home.chatwith') }} {{$user->name}}</div>
+                      <!-- <div class="chat-num-messages">already 0 messages</div> -->
                   </div>
                   <i class="fa fa-star"></i>
               </div> <!-- end chat-header -->
@@ -279,12 +279,12 @@
 
 <div class="chat-message clearfix">
     <form method="post" id="frm-chat-box">
-        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+        <textarea name="message-to-send" id="message-to-send" placeholder ="{{  __('home.typemessage') }}" rows="3"></textarea>
 
         <!-- <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
         <i class="fa fa-file-image-o"></i> -->
 
-        <button type="submit">Send</button>
+        <button type="submit">{{ __('home.send') }}</button>
         <a href="javascript:void(0);" style="float: right;
 color: #94C2ED;
 font-size: 16px;
@@ -292,7 +292,7 @@ text-transform: uppercase;
 border: none;
 cursor: pointer;
 font-weight: bold;
-background: #F2F5F8;" class="cancel-chat-pop">Cancel</a>
+background: #F2F5F8;" class="cancel-chat-pop">{{ __('home.cancel')  }}</a>
     </form>
 
 </div> <!-- end chat-message -->
