@@ -87,14 +87,25 @@ class UserController extends Controller
     public function addFriend(Request $request, $id)
     {
         $user = User::find(Auth::user()->id);
-        $recipient = User::find($id);
-        if($recipient)
+        if($user->subscribed('Starter') || $user->subscribed('Ultimate'))
         {
-            $user->befriend($recipient);
+            $recipient = User::find($id);
+            if($recipient)
+            {
+                $user->befriend($recipient);
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Friend Request Sent'
+                ]);
+            }
+        }
+        else
+        {
             return response()->json([
-                'status' => true,
-                'message' => 'Friend Request Sent'
-            ]);
+                'status' => false,
+                'message' => 'Please Buy Subscription.'
+            ]);  
+            exit;  
         }
 
         return response()->json([
@@ -107,14 +118,25 @@ class UserController extends Controller
     public function removeFriend(Request $request, $id)
     {
         $user = User::find(Auth::user()->id);
-        $recipient = User::find($id);
-        if($recipient)
+        if($user->subscribed('Starter') || $user->subscribed('Ultimate'))
         {
-            $user->unfriend($recipient);
+            $recipient = User::find($id);
+            if($recipient)
+            {
+                $user->unfriend($recipient);
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Cancelled Friend Request'
+                ]);
+            }
+        }
+        else
+        {
             return response()->json([
-                'status' => true,
-                'message' => 'Cancelled Friend Request'
+                'status' => false,
+                'message' => 'Please Buy Subscription.'
             ]);
+            exit;
         }
 
         return response()->json([
@@ -127,14 +149,25 @@ class UserController extends Controller
     public function acceptFriend(Request $request, $id)
     {
         $user = User::find(Auth::user()->id);
-        $recipient = User::find($id);
-        if($recipient)
+        if($user->subscribed('Starter') || $user->subscribed('Ultimate'))
         {
-            $user->acceptFriendRequest($recipient);
+            $recipient = User::find($id);
+            if($recipient)
+            {
+                $user->acceptFriendRequest($recipient);
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Accepted'
+                ]);
+            }
+        }
+        else
+        {
             return response()->json([
-                'status' => true,
-                'message' => 'Accepted'
+                'status' => false,
+                'message' => 'Please Buy Subscription.'
             ]);
+            exit;
         }
 
         return response()->json([
@@ -147,14 +180,25 @@ class UserController extends Controller
     public function declineFriend(Request $request, $id)
     {
         $user = User::find(Auth::user()->id);
-        $recipient = User::find($id);
-        if($recipient)
+        if($user->subscribed('Starter') || $user->subscribed('Ultimate'))
         {
-            $user->denyFriendRequest($recipient);
+            $recipient = User::find($id);
+            if($recipient)
+            {
+                $user->denyFriendRequest($recipient);
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Denied'
+                ]);
+            }
+        }
+        else
+        {
             return response()->json([
-                'status' => true,
-                'message' => 'Denied'
+                'status' => false,
+                'message' => 'Please Buy Subscription.'
             ]);
+            exit;
         }
 
         return response()->json([

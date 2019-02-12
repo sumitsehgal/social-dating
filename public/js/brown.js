@@ -125,7 +125,7 @@ $(document).ready(function()
 						}
 						else
 						{
-							alert('There is Some Problem. Please Try Again...');
+							alert(response.message);
 							window.location.reload();
 						}
 					}
@@ -203,7 +203,7 @@ $(document).ready(function()
 						}
 						else
 						{
-							alert('There is Some Problem. Please Try Again...');
+							alert(response.message);
 							window.location.reload();
 						}
 					}
@@ -245,7 +245,7 @@ $(document).ready(function()
 						}
 						else
 						{
-							alert('There is Some Problem. Please Try Again...');
+							alert(response.message);
 							window.location.reload();
 						}
 					}
@@ -318,6 +318,11 @@ $(document).ready(function()
 							}
 						});
 					}
+					else
+					{
+						$('.loading').hide();
+						alert("Please Buy Subscription...");
+					}
 				}
 			});
 		});
@@ -335,6 +340,10 @@ $(document).ready(function()
 				$.ajax({
 					url: '/chat/receivemessage/'+convId,
 					data:{messageId: lastMessageId},
+					beforeSend:function()
+					{
+
+					},
 					success: function(response)
 					{
 						$('.chat-history ul').append(response.html);

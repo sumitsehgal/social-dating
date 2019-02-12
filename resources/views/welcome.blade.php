@@ -273,15 +273,7 @@
                         <div class="trial">Available for {{$plan->description}}</div>
                         <hr>
                         <ul>
-                            <li>
-                                <strong>8</strong> team members
-                            </li>
-                            <li>
-                                <strong>6</strong> team playlists
-                            </li>
-                            <li>
-                                <strong>Unlimited</strong> public playlists
-                            </li>
+                            {!! $plan->content !!}
                         </ul>
                         <a href="/membership/upgrade/{{$plan->stripe_plan_id}}" class="btn btn-success  @auth @else login-check  @endauth ">{{ __('register.subscribe_now') }}</a>
                     </div>

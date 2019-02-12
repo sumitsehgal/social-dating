@@ -19,21 +19,31 @@ class ConversionController extends Controller
 
     public function initiate(Request $request)
     {
-        if(!empty($request['friendUserId']))
+        $loggedUser = Auth::user();
+        if($loggedUser->subscribed('Ultimate'))
         {
-            $friendUser = User::find($request['friendUserId']);
-            $user = Auth::user();
-
-            $conversation = Chat::conversations()->between($friendUser, $user);
-
-            if(empty($conversation))
+            if(!empty($request['friendUserId']))
             {
-                // Create New One
-                $conversation = Chat::createConversation([$friendUser, $user])->makePrivate();
+                $friendUser = User::find($request['friendUserId']);
+                $user = Auth::user();
+
+                $conversation = Chat::conversations()->between($friendUser, $user);
+
+                if(empty($conversation))
+                {
+                    // Create New One
+                    $conversation = Chat::createConversation([$friendUser, $user])->makePrivate();
+                }
+
+                return response($conversation);
+
             }
-
-            return response($conversation);
-
+        }
+        else
+        {
+            return response()->json([
+                'response'=>false
+            ]);
         }
     }
 

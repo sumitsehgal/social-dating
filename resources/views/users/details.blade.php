@@ -277,6 +277,8 @@
 <div id="chat-end"></div>
 </div> <!-- end chat-history -->
 
+
+
 <div class="chat-message clearfix">
     <form method="post" id="frm-chat-box">
         <textarea name="message-to-send" id="message-to-send" placeholder ="{{  __('home.typemessage') }}" rows="3"></textarea>
@@ -296,6 +298,8 @@ background: #F2F5F8;" class="cancel-chat-pop">{{ __('home.cancel')  }}</a>
     </form>
 
 </div> <!-- end chat-message -->
+
+
 
 </div> <!-- end chat -->
 
