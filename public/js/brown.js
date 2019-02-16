@@ -7,6 +7,7 @@ $(document).ready(function()
 	$('.language_drop').on('change', function()
 	{
 		var locale = $(this).val();
+		$('.loading').show();
 
 		window.location.href = '/setlanguage/'+locale;
 
@@ -21,24 +22,9 @@ $(document).ready(function()
 		}
 	});
 
-	$('#home-registration #reg_email2, #reg_email').on('change', function()
+	$('#home-registration #reg_email2, #reg_email').on('blur', function()
 	{
-			var email = $(this).val();
-			var ibox = $(this);
-			var jqxhr = $.post( '/checkemail', {email: email} , function(response) {
-			  	if(!response.response)
-			  	{
-			  		alert('Email Already Exist');
-			  	}
-			}).done(function() {
-			    $('.loading').hide();
-			  })
-			  .fail(function() {
-			    
-			  })
-			  .always(function() {
-			    
-			  });
+			
 
 	});
 
@@ -463,14 +449,39 @@ $(document).ready(function()
 	setInterval(getUnread, 5000);
 	
 
+	function validateEmail(emailField){
+		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+		if (reg.test(emailField) == false) 
+		{
+				//alert('Invalid Email Address');
+				return false;
+		}
+
+		return true;
+
+}
+
 
 	if($('.frm-register').length > 0)
 	{
-		$('.frm-register').on('submit', function()
+		$('.frm-register-link').on('click', function()
 		{
-			var password = $(this).find('.password').first().val();
-			var cPassword = $(this).find('.confirm-password').first().val();
+			var email = $(this).parents('.frm-register').first().find('#reg_email2').val();
+			var password = $(this).parents('.frm-register').first().find('.password').first().val();
+			var cPassword = $(this).parents('.frm-register').first().find('.confirm-password').first().val();
 
+			if(email.length <= 0)
+			{
+				alert('Email is Required');
+				return false;
+			}
+
+			if(!validateEmail(email))
+			{
+				alert("The email must be a valid email address.");
+				return false;
+			}
 			if(password.length < 6)
 			{
 				alert('The password must be at least 6 characters.');
@@ -484,7 +495,29 @@ $(document).ready(function()
 				return false;
 			}
 
-			$('.loading').show();
+
+			var ibox = $(this);
+			var jqxhr = $.post( '/checkemail', {email: email} , function(response) {
+			  	if(!response.response)
+			  	{
+			  		alert('Email Already Exist');
+					}
+					else
+					{
+						$('.loading').show();
+						$('.frm-register').submit();
+					}
+				}).done(function() {
+						$('.loading').hide();
+					})
+					.fail(function() {
+						
+					})
+					.always(function() {
+						
+					});
+
+				return false;
 
 		});
 	}
@@ -497,6 +530,12 @@ $(document).ready(function()
 			window.scrollTo(0, 0);
 			return false;
 		});
+	}
+
+
+	if($('#profile-modal').length > 0)
+	{
+		$('#profile-modal').modal('show');
 	}
 
 

@@ -63,20 +63,20 @@
                             @if(!empty($currentUser))
                                 @if($currentUser->id != $user->id)
                                     @if($currentUser->hasSentFriendRequestTo($user))
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn cancel-friend" userid="{{$user->id}}" >{{ __('home.cancel_request') }} <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn cancel-friend" userid="{{$user->id}}" >{{ __('home.cancel_request') }} <!--<img src="img/user.png" alt="">--></a>
                                     @elseif($currentUser->isFriendWith($user))
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn " userid="{{$user->id}}" >{{ __('home.friend') }} <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn " userid="{{$user->id}}" >{{ __('home.friend') }} <!--<img src="img/user.png" alt="">--></a>
                                     @elseif($currentUser->hasFriendRequestFrom($user))
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn approve-request" userid="{{$user->id}}" >{{ __('home.confirm') }} <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn approve-request" userid="{{$user->id}}" >{{ __('home.confirm') }} <!--<img src="img/user.png" alt="">--></a>
                                     @else
-                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn add-friend" userid="{{$user->id}}" >{{ __('home.addfriend') }} <img src="img/user.png" alt=""></a>
+                                        <a href="javascript:void(0);" value="LogIn" class="btn form-control login_btn add-friend" userid="{{$user->id}}" >{{ __('home.addfriend') }} <!--<img src="img/user.png" alt="">--></a>
                                     @endif
-                                    <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn" userid="{{$user->id}}">{{__('home.chatnow') }} ({{$unread}}) <img src="img/comment.png" alt=""></a>
+                                    <a href="javascript:void(0);"  class="btn form-control chat-now-btn login_btn" userid="{{$user->id}}">{{__('home.chatnow') }} ({{$unread}}) <!--<img src="img/comment.png" alt="">--></a>
                                 @else
                                 <a href="/profile" class="btn form-control login_btn "  > {{ __('home.editprofile') }} <img src="img/user.png" alt=""></a>
                                 @endif
                             @else
-                                <a href="javascript:void(0);" onclick="alert('Please Login'); return;" value="LogIn" class="btn form-control login_btn" userid="{{$user->id}}" > {{ __('home.addfriend') }} <img src="img/user.png" alt=""></a>
+                                <a href="javascript:void(0);" onclick="alert('Please Login'); return;" value="LogIn" class="btn form-control login_btn" userid="{{$user->id}}" > {{ __('home.addfriend') }} <!--<img src="img/user.png" alt="">--></a>
                             @endif
                             </div>
                         </div>

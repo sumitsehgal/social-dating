@@ -72,7 +72,7 @@
                                         </div>
                                     </div>
                                     <div class="reg_chose form-group">
-                                        <button type="submit" value="LogIn" class="btn form-control login_btn ">{{ __('register.register') }}</button>
+                                        <button type="submit" value="LogIn" class="btn form-control login_btn frm-register-link">{{ __('register.register') }}</button>
                                     </div>
                                 </form>
                             </div>

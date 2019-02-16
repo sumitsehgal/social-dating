@@ -33,6 +33,21 @@ class HomeController extends Controller
         $this->middleware('auth');
         $loggedUser = Auth::user();
         $allUsers = User::whereNotIn('id', [$loggedUser->id])->paginate(12);
+
+        $essentialProfile = ['height', 'weight', 'country', 'city', 'aboutme', 'aboutpartner', 'work_as', 'education', 'languages', 'interests', 'eye_color'];
+        $totalColumns = count($essentialProfile);
+        $columns = 0;
+        foreach($essentialProfile as $col)
+        {
+            if($loggedUser->profile->{$col})
+            {
+                //completed
+                $columns++;
+            }
+        }
+
+        $percentage = ($columns / $totalColumns) * 100;
+
         if ($request->ajax()) 
         {
             $view = view('elements.singleuser', compact('allUsers'))->render();
@@ -44,7 +59,7 @@ class HomeController extends Controller
         $activeUsers = User::whereNotIn('id', [$loggedUser->id])->where('lastActivity', '>=', $currentAt)->limit(12)->get();
         $pendingRequests = $loggedUser->getFriendRequests();
 
-        return view('home', compact('users', 'activeUsers', 'allUsers', 'pendingRequests'));
+        return view('home', compact('users', 'activeUsers', 'allUsers', 'pendingRequests', 'percentage'));
     }
 
     public function allUsers()

@@ -197,4 +197,26 @@
 </section>
 <!--================End All Members Area =================-->
 
+@if($percentage < 75)
+<div id="profile-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Update Your Profile</h4>
+      </div>
+      <div class="modal-body">
+        <p>Your Profile is {{ceil($percentage)}}% done. Please Complete this.  </p>
+      </div>
+      <div class="modal-footer">
+        <a href="/profile" class="btn btn-default" >Complete Now</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+@endif
 @endsection
