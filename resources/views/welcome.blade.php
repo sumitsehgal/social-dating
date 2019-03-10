@@ -3,23 +3,25 @@
 @section('content')
 <!--================Slider Reg Area =================-->
         <section class="slider_area">
-            <div class="slider_inner">
+            <!-- <div class="slider_inner">
                 <div class="rev_slider"  data-version="5.3.0.2" id="home-slider">
-                    <ul> 
-                       <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off">
+                    <ul>  -->
+                       <!-- <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off"> -->
                             <!-- MAIN IMAGE -->
-                            <img src="images/bg2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <div class="banner-image" style="height: 700px;overflow: hidden;">                            
+                               <img style="min-height: 100%;" src="images/banner1.jpg">
+                            </div>
                             <!-- LAYERS -->
-                        </li>
-                        <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off">
+                        <!-- </li> -->
+                        <!-- <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off"> -->
                             <!-- MAIN IMAGE -->
-                            <img src="images/bg2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- <img src="images/bg2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
                             <!-- LAYERS -->
-                        </li>
+                       <!--  </li> -->
                         
-                    </ul> 
-                </div><!-- END REVOLUTION SLIDER -->
-            </div>
+                   <!--  </ul> 
+                </div>END REVOLUTION SLIDER
+            </div> -->
             <div class="registration_form_area">
                 <div class="container">
                     <div class="row">
