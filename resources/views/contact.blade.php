@@ -19,30 +19,30 @@
         <section class="address_details">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <!-- <div class="col-sm-4">
                         <div class="address_item">
                             <img src="img/soul-icon/address-1.png" alt="">
                             <h3>{{ __('contact.address') }}</h3>
                             <h4>Makily Duchaine</h4>
                             <h4>15 voie de la grange des prés<br> 60260 Lamorlaye, France</h4>
                         </div>
-                    </div>
+                    </div> -->
 
 
 
 
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="address_item">
                             <img src="img/soul-icon/address-2.png" alt="">
                             <h3>{{ __('contact.phone')  }}</h3>
-                            <h4>+(33) 0628912394</h4>
+                            <h4>+(33) 628912394</h4>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="address_item">
                             <img src="img/soul-icon/address-3.png" alt="">
                             <h3>{{ __('register.email') }}</h3>
-                            <h4>neelfact1@hotmail.fr</h4>
+                            <h4>Brownshugarmale@outlook.fr</h4>
                         </div>
                     </div>
                 </div>
