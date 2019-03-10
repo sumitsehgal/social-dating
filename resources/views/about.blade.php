@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="who_we_right">
-                            <img src="img/who-we-right.jpg" alt="">
+                             <img src="images/about-us-right.jpg" alt="">
                         </div>
                     </div>
                 </div>
