@@ -9,7 +9,7 @@
                        <!-- <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off"> -->
                             <!-- MAIN IMAGE -->
                             <div class="banner-image" style="height: 700px;overflow: hidden;">                            
-                               <img style="min-height: 100%;" src="images/banner1.jpg">
+                               <img style="max-width:100%;" src="images/banner2.jpg">
                             </div>
                             <!-- LAYERS -->
                         <!-- </li> -->
@@ -25,6 +25,11 @@
             <div class="registration_form_area">
                 <div class="container">
                     <div class="row">
+                        <div class="col-sm-6">
+                            <!-- <div class="form_man">
+                                <img src="{{ asset('img/registration-man.png') }}" alt="">
+                            </div> -->
+                        </div>
                         <div class="col-sm-6">
                             @if(!Auth::check())
                             <div class="registration_form_s">
@@ -79,11 +84,6 @@
                                 </form>
                             </div>
                             @endif
-                        </div>
-                        <div class="col-sm-6">
-                            <!-- <div class="form_man">
-                                <img src="{{ asset('img/registration-man.png') }}" alt="">
-                            </div> -->
                         </div>
                     </div>
                 </div>
