@@ -8239,3 +8239,9 @@ body, p, h1, h2, h3, h4, h5, h6 {
     transform: scale(0.7);
   }
 }
+
+
+
+body.fr .chat-now-btn {
+    min-width: 220px;
+}
