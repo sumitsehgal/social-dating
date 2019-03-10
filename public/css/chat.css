@@ -2,7 +2,7 @@ section.chat-wrapper{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 999;
+    z-index: 999999;
 }
 .chat {
   width: 350px;
@@ -109,6 +109,7 @@ section.chat-wrapper{
   cursor: pointer;
   font-weight: bold;
   background: #F2F5F8;
+  margin: -2px 0 0 10px;
 }
 .chat .chat-message button:hover {
   color: #75b1e8;
