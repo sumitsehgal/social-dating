@@ -8245,3 +8245,17 @@ body, p, h1, h2, h3, h4, h5, h6 {
 body.fr .chat-now-btn {
     min-width: 220px;
 }
+
+
+.image-wrapper {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
