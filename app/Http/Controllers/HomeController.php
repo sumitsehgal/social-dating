@@ -32,6 +32,10 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
         $loggedUser = Auth::user();
+        if($loggedUser->role == User::ROLE_ADMIN)
+        {
+            return redirect('/admin/'); 
+        }
         $allUsers = User::whereNotIn('id', [$loggedUser->id])->paginate(12);
 
         $essentialProfile = ['height', 'weight', 'country', 'city', 'aboutme', 'aboutpartner', 'work_as', 'education', 'languages', 'interests', 'eye_color'];

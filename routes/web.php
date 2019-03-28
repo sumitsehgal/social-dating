@@ -36,6 +36,9 @@ Route::post('/profile-post', 'UserController@postProfile');
 Route::get('/membership/upgrade/{plan}', 'MembershipController@upgrade');
 Route::post('/membership/upgrade/{plan}', 'MembershipController@postUpgrade');
 
+Route::get('/admin', 'AdminController@dashboard')->middleware(['auth', 'is_admin'])->name('dashboard');
+Route::get('/admin/users/{slug}', 'AdminController@getUsers')->middleware(['auth', 'is_admin'])->name('dashboard');
+
 Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');

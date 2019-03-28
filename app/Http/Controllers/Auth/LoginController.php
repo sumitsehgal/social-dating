@@ -67,6 +67,12 @@ class LoginController extends Controller
             // ToDo : Password Change Notification IF Blank
             Auth::login($user);
        }
+
+        if($user->role == User::ROLE_ADMIN){
+            return redirect()->route('dashboard') ;
+            exit;
+        }
+
        return redirect($this->redirectTo);
    }
 

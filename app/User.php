@@ -24,7 +24,7 @@ class User extends Authenticatable implements HasMedia //implements MustVerifyEm
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'dob', 'gender', 'provider', 'provider_id', 'access_token', 'avatar', 'email_verified_at'
+        'name', 'email', 'password', 'dob', 'gender', 'provider', 'provider_id', 'access_token', 'avatar', 'email_verified_at', 'role'
     ];
 
     protected $casts = [
@@ -45,6 +45,9 @@ class User extends Authenticatable implements HasMedia //implements MustVerifyEm
 
     const ONLINE_TIME_WINDOW = 5;
 
+    const ROLE_USER = 'user',
+        ROLE_ADMIN = 'admin';
+
     public function my_validate($data)
     {
         if(array_key_exists('dob', $data) && !empty($data['dob']))
@@ -58,6 +61,10 @@ class User extends Authenticatable implements HasMedia //implements MustVerifyEm
     {
         $currentAt =  \Carbon\Carbon::now()->subMinutes(self::ONLINE_TIME_WINDOW); // Currently Online Window is 5 Minutes
         return ($this->lastActivity >= $currentAt);
+    }
+
+    public function isAdmin()    {        
+        return $this->role === self::ROLE_ADMIN;    
     }
 
     public function profile()

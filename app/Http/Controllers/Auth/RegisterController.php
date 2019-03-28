@@ -70,6 +70,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'gender' => $data['gender'],
+            'role'  => isset($data['role']) ? $data['role'] : User::ROLE_USER,
         ]);
         $data = $user->my_validate($data);
         unset($data['password']);
